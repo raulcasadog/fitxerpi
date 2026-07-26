@@ -85,7 +85,7 @@ h1 em{
   font-family:'Open Sans', Arial, sans-serif;
   font-size:20px;
   font-weight:600;
-  padding:20px 22px;
+  padding:20px 52px 20px 22px;
   border:1.5px solid var(--ink);
   border-radius:3px;
   background:var(--card);
@@ -99,6 +99,26 @@ h1 em{
   transform: translateY(-1px);
   box-shadow: 0 1px 0 rgba(36,51,59,0.06), 0 14px 28px -12px rgba(36,51,59,0.45);
 }
+#clear-search{
+  display:none;
+  position:absolute;
+  top:50%;
+  right:14px;
+  transform:translateY(-50%);
+  width:32px;
+  height:32px;
+  border:none;
+  border-radius:50%;
+  background:var(--paper-dark);
+  color:var(--ink-soft);
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+}
+#clear-search:hover{background:var(--line); color:var(--ink);}
+#clear-search.show{display:flex;}
 .count-tag{
   font-family:'Open Sans', Arial, sans-serif;
   font-size:12px;

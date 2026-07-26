@@ -91,12 +91,18 @@ const searchInput = document.getElementById('search');
 const resultsEl = document.getElementById('results');
 const detailEl = document.getElementById('detail');
 const countTag = document.getElementById('count-tag');
+const clearBtn = document.getElementById('clear-search');
 
 function norm(s){
   return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 }
 
+function updateClearBtn(){
+  clearBtn.classList.toggle('show', searchInput.value.length > 0);
+}
+
 function renderResults(query){
+  updateClearBtn();
   const q = norm(query);
   if(!q){ resultsEl.classList.remove('show'); resultsEl.innerHTML=''; countTag.textContent=''; return; }
   const matches = DATA.filter(l => norm(l.nom).includes(q) || norm(l.codi).includes(q)).slice(0,40);
@@ -179,6 +185,15 @@ function renderDetail(lib){
 searchInput.addEventListener('input', (e) => renderResults(e.target.value));
 searchInput.addEventListener('focus', (e) => { if(e.target.value) renderResults(e.target.value); });
 
+clearBtn.addEventListener('click', () => {
+  searchInput.value = '';
+  updateClearBtn();
+  resultsEl.classList.remove('show');
+  resultsEl.innerHTML = '';
+  countTag.textContent = '';
+  searchInput.focus();
+});
+
 resultsEl.addEventListener('click', (e) => {
   const row = e.target.closest('.result-row');
   if(!row) return;
@@ -187,6 +202,7 @@ resultsEl.addEventListener('click', (e) => {
     renderDetail(lib);
     resultsEl.classList.remove('show');
     searchInput.value = lib.nom;
+    updateClearBtn();
     detailEl.scrollIntoView({behavior:'smooth', block:'nearest'});
   }
 });
