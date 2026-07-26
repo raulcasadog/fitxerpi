@@ -3,7 +3,7 @@
   --paper-dark: #E4D9C1;
   --card: #FBF7EE;
   --ink: #24333B;
-  --ink-soft: #5B6B70;
+  --ink-soft: #47565B;
   --line: #C9BC9E;
   --green: #3D6B4F;
   --green-deep: #2A4B37;
@@ -82,9 +82,9 @@ h1 em{
 }
 #search{
   width:100%;
-  font-family:'Fraunces', serif;
-  font-size:22px;
-  font-weight:500;
+  font-family:'Source Sans 3', sans-serif;
+  font-size:20px;
+  font-weight:600;
   padding:20px 22px;
   border:1.5px solid var(--ink);
   border-radius:3px;
@@ -94,14 +94,14 @@ h1 em{
   box-shadow: var(--shadow);
   transition: box-shadow .2s ease, transform .2s ease;
 }
-#search::placeholder{color:#9AA6A2; font-weight:400; font-style:italic;}
+#search::placeholder{color:#7E8B8F; font-weight:400; font-style:italic;}
 #search:focus{
   transform: translateY(-1px);
   box-shadow: 0 1px 0 rgba(36,51,59,0.06), 0 14px 28px -12px rgba(36,51,59,0.45);
 }
 .count-tag{
   font-family:'IBM Plex Mono', monospace;
-  font-size:11px;
+  font-size:12px;
   color:var(--ink-soft);
   margin-top:8px;
   padding-left:4px;
@@ -131,7 +131,7 @@ h1 em{
 .result-row:last-child{border-bottom:none;}
 .result-row:hover, .result-row.active{background: var(--paper-dark);}
 .result-name{font-size:15px; font-weight:600;}
-.result-code{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft);}
+.result-code{font-family:'IBM Plex Mono', monospace; font-size:13.5px; font-weight:600; color:var(--ink-soft);}
 .result-dot{
   width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-right:10px; display:inline-block;
 }
@@ -225,7 +225,7 @@ h1 em{
 }
 .meta-label{
   font-family:'IBM Plex Mono', monospace;
-  font-size:10.5px;
+  font-size:11.5px;
   letter-spacing:0.1em;
   text-transform:uppercase;
   color:var(--ink-soft);
@@ -280,7 +280,7 @@ h1 em{
   color:var(--green-deep);
 }
 .web-link-sub{
-  font-size:12.5px;
+  font-size:13.5px;
   color:var(--ink-soft);
 }
 .web-link-arrow{
@@ -314,7 +314,7 @@ h1 em{
   padding-top:18px;
   border-top:1px solid var(--line);
   font-family:'IBM Plex Mono', monospace;
-  font-size:12px;
+  font-size:13px;
   color:var(--ink-soft);
 }
 .legend span{display:inline-flex; align-items:center; gap:7px;}
