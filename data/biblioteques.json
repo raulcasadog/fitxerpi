@@ -4400,7 +4400,12 @@
   "observacions": "",
   "tancament_inici": null,
   "tancament_fi": null,
-  "id": 240
+  "id": 240,
+  "horaris": {
+   "web": "https://bibliotecavirtual.diba.cat/ca/vilassar-de-dalt-biblioteca-can-manyer",
+   "font": "manual",
+   "actualitzat": "2026-07-26"
+  }
  },
  {
   "nom": "Vilassar de Mar. Biblioteca Ernest Lluch i Martín",
