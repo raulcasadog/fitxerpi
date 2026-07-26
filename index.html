@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitxer PI — Cercador de biblioteques</title>
+<meta name="description" content="Cerca l'estat, el codi i la freqüència de préstec interbibliotecari de qualsevol biblioteca de la Xarxa de Biblioteques Municipals.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Xarxa de Biblioteques · Préstec Interbibliotecari</div>
+    <h1>Fitxer <em>PI</em></h1>
+    <p class="sub">Cerca una biblioteca de la Xarxa de Biblioteques Municipals per saber si avui pot rebre i servir peticions, el seu codi de préstec interbibliotecari i la freqüència de recollida.</p>
+  </header>
+
+  <div class="search-wrap">
+    <span class="search-label">Cercar biblioteca</span>
+    <input type="text" id="search" placeholder="Escriu municipi, biblioteca o codi PI…" autocomplete="off">
+  </div>
+  <div class="count-tag" id="count-tag"></div>
+
+  <div id="results"></div>
+
+  <div id="detail"></div>
+
+  <div class="legend">
+    <span><i class="result-dot dot-obert"></i> Oberta — rep i serveix peticions</span>
+    <span><i class="result-dot dot-restringit"></i> Restringida — només rep, no serveix</span>
+    <span><i class="result-dot dot-tancat"></i> Tancada</span>
+    <span><i class="result-dot dot-no_actiu"></i> No activa</span>
+  </div>
+
+  <footer>
+    Dades: Diputació de Barcelona · Actualització 17/07/2026 · Prototip no oficial<br>
+    <a href="privacy.html">Política de privacitat</a>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
