@@ -14,28 +14,30 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Xarxa de Biblioteques DIBA · Préstec Interbibliotecari</div>
+    <div class="eyebrow">Xarxa de Biblioteques Municipals DIBA · Préstec Interbibliotecari</div>
     <h1>Fitxer <em>PI</em></h1>
     <p class="sub">Cerca una biblioteca de la Xarxa de Biblioteques Municipals per saber si avui pot rebre i servir peticions, el seu codi de préstec interbibliotecari i la freqüència de recollida.</p>
   </header>
 
-  <div class="search-wrap">
-    <span class="search-label">Cercar biblioteca</span>
-    <input type="text" id="search" placeholder="Escriu municipi, biblioteca o codi PI…" autocomplete="off">
-    <button type="button" id="clear-search" aria-label="Esborrar cerca" title="Esborrar">&times;</button>
-  </div>
-  <div class="count-tag" id="count-tag"></div>
+  <main>
+    <div class="search-wrap">
+      <span class="search-label">Cercar biblioteca</span>
+      <input type="text" id="search" placeholder="Escriu municipi, biblioteca o codi PI…" autocomplete="off">
+      <button type="button" id="clear-search" aria-label="Esborrar cerca" title="Esborrar">&times;</button>
+    </div>
+    <div class="count-tag" id="count-tag"></div>
 
-  <div id="results"></div>
+    <div id="results"></div>
 
-  <div id="detail"></div>
+    <div id="detail"></div>
 
-  <div class="legend">
-    <span><i class="result-dot dot-obert"></i> Oberta — rep i serveix peticions</span>
-    <span><i class="result-dot dot-restringit"></i> Restringida — només rep, no serveix</span>
-    <span><i class="result-dot dot-tancat"></i> Tancada</span>
-    <span><i class="result-dot dot-no_actiu"></i> No activa</span>
-  </div>
+    <div class="legend">
+      <span><i class="result-dot dot-obert"></i> Oberta — rep i serveix peticions</span>
+      <span><i class="result-dot dot-restringit"></i> Restringida — només rep, no serveix</span>
+      <span><i class="result-dot dot-tancat"></i> Tancada</span>
+      <span><i class="result-dot dot-no_actiu"></i> No activa</span>
+    </div>
+  </main>
 
   <footer>
     Dades: Diputació de Barcelona · Actualització 17/07/2026 · Prototip no oficial<br>
