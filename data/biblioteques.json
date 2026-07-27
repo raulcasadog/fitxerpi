@@ -2296,7 +2296,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2351,7 +2351,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ]
  },
@@ -2368,7 +2368,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-28"
+    "fi": "2026-08-30"
    }
   ]
  },
@@ -2385,7 +2385,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-17",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2472,8 +2472,8 @@
   "id": 138,
   "tancaments_estiu": [
    {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
+    "inici": "2026-08-31",
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2506,7 +2506,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2528,7 +2528,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2563,6 +2563,12 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 143,
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-27",
+    "fi": "2026-08-28"
+   }
+  ],
   "horaris": {
    "web": "https://www.pinedademar.cat/serveis/cultura/biblioteques",
    "font": "do.diba.cat (export CSV)",
@@ -2579,6 +2585,12 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 144,
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-27",
+    "fi": "2026-08-28"
+   }
+  ],
   "horaris": {
    "web": "https://www.pinedademar.org/serveis/cultura/biblioteques",
    "font": "do.diba.cat (export CSV)",
@@ -2598,7 +2610,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ]
  },
@@ -2615,7 +2627,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2707,8 +2719,8 @@
   "id": 151,
   "tancaments_estiu": [
    {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
+    "inici": "2026-08-31",
+    "fi": "2026-09-01"
    }
   ],
   "horaris": {
@@ -2730,7 +2742,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
