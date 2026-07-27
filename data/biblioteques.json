@@ -709,7 +709,8 @@
     "inici": "2026-08-03",
     "fi": "2026-08-28"
    }
-   "horaris": {
+  ],
+  "horaris": {
    "web": "http://www.bcn.cat/bibtrinitatvella",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
@@ -2472,6 +2473,10 @@
   "id": 138,
   "tancaments_estiu": [
    {
+    "inici": "2026-08-10",
+    "fi": "2026-08-23"
+   },
+   {
     "inici": "2026-08-31",
     "fi": "2026-08-31"
    }
@@ -2718,6 +2723,10 @@
   "tancament_fi": null,
   "id": 151,
   "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-23"
+   },
    {
     "inici": "2026-08-31",
     "fi": "2026-09-01"
