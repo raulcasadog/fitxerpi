@@ -4529,7 +4529,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-28"
+    "fi": "2026-08-26"
    }
   ],
   "horaris": {
@@ -4551,7 +4551,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -4595,7 +4595,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-29",
-    "fi": "2026-08-21"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4639,7 +4639,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -4702,6 +4702,12 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 254,
+  "tancaments_estiu": [
+   {
+    "inici": "2026-07-29",
+    "fi": "2026-08-28"
+   }
+  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-tagamanent-1",
    "font": "do.diba.cat (export CSV)",
