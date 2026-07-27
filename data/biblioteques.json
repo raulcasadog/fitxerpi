@@ -73,7 +73,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -143,7 +143,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -186,7 +186,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -204,7 +204,19 @@
    "web": "http://www.bcn.cat/bibelclot",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ],
+  "tancaments_estiu_web": [
+   {
+    "inici": "2026-08-01",
+    "fi": "2026-08-31"
+   }
+  ]
  },
  {
   "nom": "Barcelona. Esquerra Eixample-Agustí Centelles",
@@ -235,7 +247,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -305,7 +317,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -343,7 +355,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -397,7 +409,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -467,7 +479,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -505,7 +517,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-07-19"
+    "fi": "2026-07-17"
    }
   ],
   "horaris": {
@@ -527,7 +539,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -565,7 +577,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-09-02"
    }
   ],
   "horaris": {
@@ -603,7 +615,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -673,7 +685,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -711,7 +723,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -813,7 +825,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -840,7 +852,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -868,7 +880,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -887,12 +899,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 51,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-17",
-    "fi": "2026-08-23"
-   }
-  ],
   "horaris": {
    "web": "https://www.arenysdemar.cat/biblioteca.php",
    "font": "do.diba.cat (export CSV)",
@@ -923,7 +929,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -940,7 +946,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -978,7 +984,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1000,7 +1006,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-09-02"
    }
   ],
   "horaris": {
@@ -1022,7 +1028,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -1040,7 +1046,13 @@
    "web": "https://badabiblios.cat",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ]
  },
  {
   "nom": "Badalona. Sant Roc",
@@ -1051,7 +1063,13 @@
   "observacions": "",
   "tancament_inici": null,
   "tancament_fi": null,
-  "id": 60
+  "id": 60,
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ]
  },
  {
   "nom": "Badia del Vallès. Vicente Aleixandre",
@@ -1114,7 +1132,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1147,7 +1165,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1185,7 +1203,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1207,7 +1225,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -1245,7 +1263,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -1294,7 +1312,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1316,7 +1334,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -1349,7 +1367,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1387,7 +1405,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1425,7 +1443,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ]
  },
@@ -1458,7 +1476,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-09-02"
    }
   ],
   "horaris": {
@@ -1480,7 +1498,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -1539,7 +1557,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -1588,7 +1606,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1610,7 +1628,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -1631,12 +1649,8 @@
   "id": 92,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-13",
-    "fi": "2026-07-19"
-   },
-   {
     "inici": "2026-08-10",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -1658,7 +1672,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ]
  },
@@ -1680,7 +1694,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -1693,7 +1707,13 @@
   "observacions": "",
   "tancament_inici": null,
   "tancament_fi": null,
-  "id": 95
+  "id": 95,
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ]
  },
  {
   "nom": "Garriga, La. Núria Albó",
@@ -1705,12 +1725,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 96,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-09"
-   }
-  ],
   "horaris": {
    "web": "https://www.lagarriga.cat",
    "font": "do.diba.cat (export CSV)",
@@ -1746,7 +1760,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -1763,7 +1777,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -1926,12 +1940,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 109,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-24",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecaigualada.cat",
    "font": "do.diba.cat (export CSV)",
@@ -1951,7 +1959,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -1974,7 +1982,13 @@
    "web": "https://bibliotecallicamunt.wordpress.com/",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ]
  },
  {
   "nom": "Llinars del Vallès. Can Casas",
@@ -1989,7 +2003,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2027,7 +2041,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2046,12 +2060,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 115,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-09-06"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotequesdemanresa.wordpress.com/",
    "font": "do.diba.cat (export CSV)",
@@ -2082,7 +2090,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -2104,7 +2112,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2141,8 +2149,8 @@
   "id": 120,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-20",
-    "fi": "2026-08-16"
+    "inici": "2026-07-27",
+    "fi": "2026-08-14"
    }
   ]
  },
@@ -2159,7 +2167,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2178,12 +2186,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 122,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-02"
-   }
-  ],
   "horaris": {
    "web": "https://biblioteques.culturamataro.cat/",
    "font": "do.diba.cat (export CSV)",
@@ -2232,12 +2234,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 125,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-17",
-    "fi": "2026-08-23"
-   }
-  ],
   "horaris": {
    "web": "http://biblioteca.moia.cat/",
    "font": "do.diba.cat (export CSV)",
@@ -2254,12 +2250,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 126,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-16"
-   }
-  ],
   "horaris": {
    "web": "https://www.molinsderei.site/bibliotecaelmoli/",
    "font": "do.diba.cat (export CSV)",
@@ -2295,7 +2285,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2333,7 +2323,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -2350,7 +2340,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -2367,7 +2357,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -2384,7 +2374,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-17",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2406,7 +2396,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-30"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -2423,7 +2413,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -2453,12 +2443,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 137,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-24",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://www.palafolls.cat/pl6/el-municipi/equipaments/id40/biblioteca.htm",
    "font": "do.diba.cat (export CSV)",
@@ -2478,11 +2462,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
-   },
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-09-06"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2515,7 +2495,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2536,8 +2516,8 @@
   "id": 141,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-27",
-    "fi": "2026-09-06"
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2607,7 +2587,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -2623,12 +2603,8 @@
   "id": 146,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-20",
-    "fi": "2026-07-26"
-   },
-   {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2666,7 +2642,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2688,7 +2664,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2721,11 +2697,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
-   },
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-09-06"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2747,7 +2719,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2780,7 +2752,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -2802,7 +2774,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2824,7 +2796,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2851,7 +2823,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -2868,7 +2840,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2890,7 +2862,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2912,7 +2884,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -2966,7 +2938,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -3004,7 +2976,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3023,12 +2995,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 166,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-20",
-    "fi": "2026-07-26"
-   }
-  ],
   "horaris": {
    "web": "https://ajllavaneres.cat/ambit.php?id=2",
    "font": "do.diba.cat (export CSV)",
@@ -3048,7 +3014,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3086,7 +3052,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3124,7 +3090,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3162,7 +3128,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -3180,7 +3146,13 @@
    "web": "https://www.santcugat.cat/web/biblioteques",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ]
  },
  {
   "nom": "St. Esteve Sesrovires. Joan Pomar i Solà",
@@ -3200,7 +3172,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -3244,7 +3216,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3265,8 +3237,8 @@
   "id": 179,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-27",
-    "fi": "2026-09-06"
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -3299,7 +3271,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -3316,7 +3288,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ]
  },
@@ -3334,7 +3306,13 @@
    "web": "https://sites.google.com/view/bibsjdmr/inici",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-14"
+   }
+  ]
  },
  {
   "nom": "St. Joan Despí. Miquel Martí i Pol",
@@ -3349,7 +3327,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-17",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3367,13 +3345,7 @@
   "observacions": "",
   "tancament_inici": null,
   "tancament_fi": null,
-  "id": 185,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-02"
-   }
-  ]
+  "id": 185
  },
  {
   "nom": "St. Just Desvern. Joan Margarit",
@@ -3388,7 +3360,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3409,12 +3381,8 @@
   "id": 187,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-20",
-    "fi": "2026-07-26"
-   },
-   {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3436,7 +3404,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-17",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3458,7 +3426,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -3480,7 +3448,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -3498,7 +3466,13 @@
    "web": "https://www.stpere.cat/",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-21"
+   }
+  ]
  },
  {
   "nom": "St. Pol de Mar. Can Coromines",
@@ -3529,7 +3503,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3551,7 +3525,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3574,7 +3548,13 @@
    "web": "https://www.santquirzevalles.cat/temes/biblioteca",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+  ]
  },
  {
   "nom": "St. Sadurní d'Anoia. Ramon Bosch de Noya",
@@ -3589,7 +3569,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -3610,12 +3590,8 @@
   "id": 197,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-13",
-    "fi": "2026-07-19"
-   },
-   {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3653,7 +3629,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -3670,7 +3646,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3692,7 +3668,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-08-02"
+    "fi": "2026-07-31"
    }
   ],
   "horaris": {
@@ -3746,7 +3722,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-09-02"
    }
   ]
  },
@@ -3768,7 +3744,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -3800,8 +3776,8 @@
   "id": 207,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-20",
-    "fi": "2026-08-30"
+    "inici": "2026-07-27",
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3823,7 +3799,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3845,7 +3821,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -3867,7 +3843,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -3888,8 +3864,8 @@
   "id": 211,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-27",
-    "fi": "2026-08-16"
+    "inici": "2026-08-03",
+    "fi": "2026-08-14"
    }
   ]
  },
@@ -3906,7 +3882,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3928,7 +3904,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-09"
+    "fi": "2026-08-07"
    }
   ],
   "horaris": {
@@ -3977,7 +3953,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-17",
-    "fi": "2026-08-30"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -3999,7 +3975,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -4117,7 +4093,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4144,7 +4120,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-09"
+    "fi": "2026-08-07"
    }
   ]
  },
@@ -4161,7 +4137,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4210,7 +4186,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ]
  },
@@ -4228,7 +4204,13 @@
    "web": "http://www.vacarisses.cat/",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
-  }
+  },
+  "tancaments_estiu_web": [
+   {
+    "inici": "2026-08-01",
+    "fi": "2026-08-25"
+   }
+  ]
  },
  {
   "nom": "Vallirana. Josep Maria López Picó",
@@ -4243,7 +4225,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-10",
-    "fi": "2026-08-23"
+    "fi": "2026-08-21"
    }
   ]
  },
@@ -4291,12 +4273,8 @@
   "id": 234,
   "tancaments_estiu": [
    {
-    "inici": "2026-07-13",
-    "fi": "2026-07-19"
-   },
-   {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4315,12 +4293,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 235,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-09-06"
-   }
-  ],
   "horaris": {
    "web": "https://biblioteca.vilafranca.cat/",
    "font": "do.diba.cat (export CSV)",
@@ -4388,7 +4360,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-16"
+    "fi": "2026-08-14"
    }
   ],
   "horaris": {
@@ -4437,7 +4409,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4459,7 +4431,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4480,8 +4452,8 @@
   "id": 244,
   "tancaments_estiu": [
    {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "inici": "2026-07-29",
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4503,7 +4475,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4525,7 +4497,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4547,7 +4519,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4568,8 +4540,8 @@
   "id": 248,
   "tancaments_estiu": [
    {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "inici": "2026-07-29",
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4590,8 +4562,8 @@
   "id": 249,
   "tancaments_estiu": [
    {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "inici": "2026-07-29",
+    "fi": "2026-08-21"
    }
   ],
   "horaris": {
@@ -4613,7 +4585,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-26"
    }
   ],
   "horaris": {
@@ -4635,7 +4607,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-09-06"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4657,7 +4629,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4678,8 +4650,8 @@
   "id": 253,
   "tancaments_estiu": [
    {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
+    "inici": "2026-07-29",
+    "fi": "2026-08-28"
    }
   ],
   "horaris": {
@@ -4698,12 +4670,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 254,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-tagamanent-1",
    "font": "do.diba.cat (export CSV)",
