@@ -44,9 +44,12 @@ function effectiveStatus(lib){
     return {status:'tancat', label:'Tancada'};
   }
 
-  // 2. Calendari de tancaments d'estiu (períodes concrets, es calcula sol amb la data d'avui)
-  if(lib.tancaments_estiu && lib.tancaments_estiu.length){
-    for(const periode of lib.tancaments_estiu){
+  // 2. Calendari de tancaments d'estiu. Si tenim una versió verificada directament a la
+  //    web oficial de la biblioteca (tancaments_estiu_web), és més fiable que la extreta
+  //    del PDF (tancaments_estiu) i es fa servir primer, sense esborrar mai la del PDF.
+  const periodesEstiu = periodesEstiuVigents(lib);
+  if(periodesEstiu && periodesEstiu.length){
+    for(const periode of periodesEstiu){
       const inici = new Date(periode.inici + 'T00:00:00');
       const fi = new Date(periode.fi + 'T00:00:00');
       if(today >= inici && today <= fi){
@@ -76,11 +79,19 @@ function effectiveStatus(lib){
   return {status:'obert', label:'Oberta', properaTancament: properTancamentFutur(lib)};
 }
 
+// Retorna els períodes d'estiu a fer servir: prioritza tancaments_estiu_web (verificat
+// directament a la web oficial de la biblioteca) per sobre de tancaments_estiu (del PDF).
+function periodesEstiuVigents(lib){
+  if(lib.tancaments_estiu_web && lib.tancaments_estiu_web.length) return lib.tancaments_estiu_web;
+  return lib.tancaments_estiu || null;
+}
+
 // Busca el proper període de tancament d'estiu que encara no ha començat,
 // per avisar amb antelació encara que la biblioteca estigui oberta ara mateix.
 function properTancamentFutur(lib){
-  if(!lib.tancaments_estiu || !lib.tancaments_estiu.length) return null;
-  const futurs = lib.tancaments_estiu
+  const periodes = periodesEstiuVigents(lib);
+  if(!periodes || !periodes.length) return null;
+  const futurs = periodes
     .map(p => ({inici: new Date(p.inici + 'T00:00:00'), fi: new Date(p.fi + 'T00:00:00')}))
     .filter(p => p.inici > today)
     .sort((a,b) => a.inici - b.inici);
