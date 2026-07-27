@@ -208,7 +208,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "tancaments_estiu_web": [
@@ -247,7 +247,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -317,7 +317,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -355,7 +355,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -409,7 +409,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -479,7 +479,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -539,7 +539,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -615,7 +615,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -685,7 +685,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -704,7 +704,12 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 40,
-  "horaris": {
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-03",
+    "fi": "2026-08-28"
+   }
+   "horaris": {
    "web": "http://www.bcn.cat/bibtrinitatvella",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
