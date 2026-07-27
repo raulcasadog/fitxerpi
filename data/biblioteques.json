@@ -1317,7 +1317,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-27",
-    "fi": "2026-08-28"
+    "fi": "2026-08-29"
    }
   ],
   "horaris": {
@@ -1372,7 +1372,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -1410,7 +1410,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -1562,7 +1562,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ]
  },
@@ -1611,7 +1611,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-07-13",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -1699,7 +1699,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ]
  },
@@ -1716,7 +1716,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ]
  },
@@ -1765,7 +1765,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ]
  },
@@ -1964,7 +1964,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
@@ -2065,6 +2065,12 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 115,
+  "tancaments_estiu": [
+   {
+    "inici": "2026-08-31",
+    "fi": "2026-08-31"
+   }
+  ],
   "horaris": {
    "web": "https://bibliotequesdemanresa.wordpress.com/",
    "font": "do.diba.cat (export CSV)",
@@ -2117,7 +2123,7 @@
   "tancaments_estiu": [
    {
     "inici": "2026-08-03",
-    "fi": "2026-08-28"
+    "fi": "2026-08-31"
    }
   ],
   "horaris": {
