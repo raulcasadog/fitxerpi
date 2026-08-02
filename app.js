@@ -203,7 +203,12 @@ const countTag = document.getElementById('count-tag');
 const clearBtn = document.getElementById('clear-search');
 
 function norm(s){
-  return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  let t = (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  // "St." i "Sta." al Fitxer PI venen abreujats a les dades oficials, però la gent
+  // sol cercar "Sant"/"Santa" sencer (o a l'inrevés). Normalitzem els dos costats
+  // (nom i consulta) a la mateixa forma perquè coincideixin sempre.
+  t = t.replace(/\b(st|sta)\.?(?=\s|$)/g, (m, p1) => p1 === 'sta' ? 'santa' : 'sant');
+  return t;
 }
 
 function updateClearBtn(){
