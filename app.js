@@ -12,6 +12,7 @@ async function loadData(){
     const res = await fetch('data/biblioteques.json');
     if(!res.ok) throw new Error('No s\'ha pogut carregar data/biblioteques.json');
     DATA = await res.json();
+    renderIncidencies();
   }catch(err){
     document.getElementById('detail').innerHTML =
       `<div class="empty-state"><div class="glyph">!</div><p>No s'han pogut carregar les dades (${err.message}). Si estàs obrint el fitxer directament des del disc, prova d'executar-lo amb un servidor local o publica'l a GitHub Pages.</p></div>`;
@@ -97,6 +98,90 @@ function properTancamentFutur(lib){
     .sort((a,b) => a.inici - b.inici);
   return futurs.length ? futurs[0] : null;
 }
+
+const incidenciesEl = document.getElementById('incidencies');
+
+function truncate(text, max = 70){
+  if(!text) return '';
+  if(text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return cut.slice(0, cut.lastIndexOf(' ')) + '…';
+}
+
+function getIncidencies(){
+  return DATA
+    .map(l => ({lib: l, st: effectiveStatus(l)}))
+    .filter(({lib, st}) => st.status !== 'obert' || (lib.observacions && lib.observacions.trim()))
+    .sort((a, b) => (a.st.status === 'obert' ? 1 : 0) - (b.st.status === 'obert' ? 1 : 0));
+}
+
+function motiuTag(lib, st){
+  if(lib.motiu) return lib.motiu;
+  if(st.motiuEstiu) return "Vacances d'estiu";
+  if(st.status === 'tancat') return 'Tancament';
+  if(st.status === 'restringit') return 'Restricció PI';
+  if(st.status === 'no_actiu') return 'No activa';
+  return 'Nota';
+}
+
+function incidenciaMeta(lib, st){
+  const fmt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
+  if(st.motiuEstiu){
+    const periode = (periodesEstiuVigents(lib) || [])
+      .map(p => ({inici: new Date(p.inici+'T00:00:00'), fi: new Date(p.fi+'T00:00:00')}))
+      .find(p => today >= p.inici && today <= p.fi);
+    if(periode) return `Tancada · torna el ${fmt(periode.fi)}`;
+  }
+  if(st.status === 'tancat'){
+    if(lib.tancament_fi) return `Tancada · torna el ${fmt(new Date(lib.tancament_fi+'T00:00:00'))}`;
+    return 'Tancada · data de reobertura no confirmada';
+  }
+  if(st.status === 'restringit') return 'Restringida · només rep peticions';
+  if(st.status === 'no_actiu') return 'No activa a la xarxa PI';
+  return truncate(lib.observacions, 60);
+}
+
+function renderIncidencies(){
+  const incidencies = getIncidencies();
+  if(!incidencies.length){
+    incidenciesEl.innerHTML = '';
+    return;
+  }
+  const rows = incidencies.map(({lib, st}) => `
+    <div class="incidencia-row" data-id="${lib.id}">
+      <i class="result-dot dot-${st.status}"></i>
+      <div>
+        <div class="incidencia-name">${lib.nom}</div>
+        <div class="incidencia-meta">${incidenciaMeta(lib, st)}</div>
+      </div>
+      <span class="incidencia-tag">${motiuTag(lib, st)}</span>
+    </div>
+  `).join('');
+  incidenciesEl.innerHTML = `
+    <details class="incidencies">
+      <summary>
+        <span class="incidencies-left">
+          Incidències actuals
+          <span class="incidencies-badge">${incidencies.length}</span>
+        </span>
+        <span class="incidencies-hint">Clica per veure <span class="incidencies-chevron"></span></span>
+      </summary>
+      <div class="incidencies-list">${rows}</div>
+    </details>
+  `;
+}
+
+incidenciesEl.addEventListener('click', (e) => {
+  const row = e.target.closest('.incidencia-row');
+  if(!row) return;
+  const lib = DATA.find(l => l.id == row.dataset.id);
+  if(lib){
+    renderDetail(lib);
+    searchInput.value = lib.nom;
+    updateClearBtn();
+    detailEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+});
 
 const searchInput = document.getElementById('search');
 const resultsEl = document.getElementById('results');
