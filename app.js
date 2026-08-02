@@ -52,8 +52,9 @@ function effectiveStatus(lib){
   if(periodesEstiu && periodesEstiu.length){
     for(const periode of periodesEstiu){
       const inici = new Date(periode.inici + 'T00:00:00');
+      const iniciEfectiu = diumengePrevi(inici);
       const fi = new Date(periode.fi + 'T00:00:00');
-      if(today >= inici && today <= fi){
+      if(today >= iniciEfectiu && today <= fi){
         const fmt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
         return {
           status:'tancat',
@@ -80,6 +81,18 @@ function effectiveStatus(lib){
   return {status:'obert', label:'Oberta', properaTancament: properTancamentFutur(lib)};
 }
 
+// Si un tancament comença en dilluns, el diumenge anterior ja es considera tancat
+// (moltes biblioteques ja no donen servei en cap de setmana, però com que no sabem
+// del cert quines tanquen també el dissabte, només avancem un dia, no dos).
+function diumengePrevi(inici){
+  if(inici.getDay() === 1){
+    const d = new Date(inici);
+    d.setDate(d.getDate() - 1);
+    return d;
+  }
+  return inici;
+}
+
 // Retorna els períodes d'estiu a fer servir: prioritza tancaments_estiu_web (verificat
 // directament a la web oficial de la biblioteca) per sobre de tancaments_estiu (del PDF).
 function periodesEstiuVigents(lib){
@@ -94,7 +107,7 @@ function properTancamentFutur(lib){
   if(!periodes || !periodes.length) return null;
   const futurs = periodes
     .map(p => ({inici: new Date(p.inici + 'T00:00:00'), fi: new Date(p.fi + 'T00:00:00')}))
-    .filter(p => p.inici > today)
+    .filter(p => diumengePrevi(p.inici) > today)
     .sort((a,b) => a.inici - b.inici);
   return futurs.length ? futurs[0] : null;
 }
@@ -129,7 +142,7 @@ function incidenciaMeta(lib, st){
   if(st.motiuEstiu){
     const periode = (periodesEstiuVigents(lib) || [])
       .map(p => ({inici: new Date(p.inici+'T00:00:00'), fi: new Date(p.fi+'T00:00:00')}))
-      .find(p => today >= p.inici && today <= p.fi);
+      .find(p => today >= diumengePrevi(p.inici) && today <= p.fi);
     if(periode) return `Tancada · torna el ${fmt(periode.fi)}`;
   }
   if(st.status === 'tancat'){
