@@ -541,7 +541,7 @@
     "valises": 1,
     "freq": "dimarts i divendres",
     "estat": "tancat",
-    "observacions": "Tancada per problemes amb la climatització. No es poden fer reserves de préstec interbibliotecari a la localització del Sierra b833: les peticions que arribin no es podran atendre i seran denegades.",
+    "observacions": "Tancada per problemes amb la climatització. No es poden fer reserves de préstec: les peticions que arribin no es podran atendre i seran denegades.",
     "tancament_inici": null,
     "tancament_fi": null,
     "id": 31,
