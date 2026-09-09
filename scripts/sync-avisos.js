@@ -146,12 +146,18 @@ function extractObservacions(pageHtml) {
   const endMarkers = ['id="library-timetablesbodyContent"', '>Horaris:<', '>Història:<', 'id="library-historybodyContent"'];
   const lower = pageHtml.toLowerCase();
 
-  let startIdx = -1;
+  let markerIdx = -1;
   for (const m of startMarkers) {
     const idx = lower.indexOf(m.toLowerCase());
-    if (idx !== -1) { startIdx = idx + m.length; break; }
+    if (idx !== -1) { markerIdx = idx; break; }
   }
-  if (startIdx === -1) return null;
+  if (markerIdx === -1) return null;
+
+  // Comencem a llegir just després del proper '>', per saltar-nos qualsevol
+  // resta de l'etiqueta (altres atributs, tancament...) i no capturar-ne
+  // fragments solts com "class=... >" al principi del text.
+  const gt = pageHtml.indexOf('>', markerIdx);
+  const startIdx = gt === -1 ? markerIdx : gt + 1;
 
   let endIdx = pageHtml.length;
   for (const m of endMarkers) {
@@ -159,7 +165,22 @@ function extractObservacions(pageHtml) {
     if (idx !== -1 && idx < endIdx) endIdx = idx;
   }
 
-  const text = stripHtml(pageHtml.slice(startIdx, endIdx));
+  let text = stripHtml(pageHtml.slice(startIdx, endIdx));
+  // Si el marcador de tancament cau enmig d'una etiqueta (p. ex. "<h3 id=..."),
+  // pot quedar un fragment d'etiqueta incomplet penjant al final; el traiem.
+  text = text.replace(/<[^>]*$/, '').trim();
+
+  // Xarxa de seguretat: un avís real hauria de ser breu. Si els marcadors de
+  // tancament no han encaixat amb l'HTML real d'aquesta pàgina en concret i
+  // hem capturat molt més del compte (activitats, peu de pàgina...), tallem
+  // a una longitud raonable en lloc de guardar-ho tot sencer.
+  const MAX_LEN = 700;
+  if (text.length > MAX_LEN) {
+    const cut = text.slice(0, MAX_LEN);
+    const lastDot = cut.lastIndexOf('.');
+    text = (lastDot > 100 ? cut.slice(0, lastDot + 1) : cut) + '…';
+  }
+
   if (!text || text.length < 15) return null;
   return text;
 }
