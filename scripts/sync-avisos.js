@@ -268,6 +268,13 @@ if (arg === '--test') {
     process.exit(1);
   }
   testOne(target).catch(err => { console.error('Error:', err); process.exit(1); });
+} else if (arg === '--dump-directory') {
+  fetchText(DIRECTORY_URL).then(html => {
+    const outPath = path.join(__dirname, '..', 'directori-raw.html');
+    fs.writeFileSync(outPath, html, 'utf-8');
+    console.log(`Desat l'HTML en brut del directori a: ${outPath}`);
+    console.log(`Mida: ${(html.length / 1024).toFixed(0)} KB`);
+  }).catch(err => { console.error('Error:', err); process.exit(1); });
 } else {
   main().catch(err => { console.error('Error executant sync-avisos.js:', err); process.exit(1); });
 }
