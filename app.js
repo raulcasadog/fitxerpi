@@ -19,92 +19,20 @@ async function loadData(){
   }
 }
 
-const DIES = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte'];
-const DIES_LABEL = {
-  dilluns: 'Dilluns', dimarts: 'Dimarts', dimecres: 'Dimecres', dijous: 'Dijous',
-  divendres: 'Divendres', dissabte: 'Dissabte', diumenge: 'Diumenge'
-};
-
-// Decideix si avui toca l'horari d'hivern o el d'estiu, comparant la
-// data d'avui amb les dates d'inici de cada temporada que ens dona
-// l'API (camp "inici": {dia, mes}). El període d'estiu és el que va
-// des de la seva data d'inici fins just abans que comenci l'hivern.
-function horariVigent(lib){
-  const h = lib.horaris;
-  if(!h) return null;
-  const { hivern, estiu } = h;
-  if(!estiu) return hivern || null;
-  if(!hivern) return estiu;
-
-  const md = (today.getMonth() + 1) * 100 + today.getDate();
-  const mdEstiu = estiu.inici ? estiu.inici.mes * 100 + estiu.inici.dia : null;
-  const mdHivern = hivern.inici ? hivern.inici.mes * 100 + hivern.inici.dia : null;
-  if(mdEstiu == null || mdHivern == null) return hivern;
-
-  if(mdEstiu <= mdHivern){
-    return (md >= mdEstiu && md < mdHivern) ? estiu : hivern;
-  }
-  // Cas estrany (temporada d'estiu a cavall d'any); per seguretat, no hauria de passar mai.
-  return (md >= mdEstiu || md < mdHivern) ? estiu : hivern;
-}
-
 function renderHorarisBlock(lib){
   const h = lib.horaris;
-  if(!h) return '';
-
-  const sched = horariVigent(lib);
-  let horariHtml = '';
-  if(sched){
-    const avuiKey = DIES[today.getDay()];
-    const avuiText = (sched[avuiKey] || '').trim() || 'Tancat';
-    const files = Object.keys(DIES_LABEL).map(k => `
-      <div class="horari-row${k === avuiKey ? ' is-today' : ''}">
-        <span class="horari-day">${DIES_LABEL[k]}</span>
-        <span class="horari-hours">${(sched[k] || '').trim() || 'Tancat'}</span>
-      </div>
-    `).join('');
-    horariHtml = `
-      <div class="horari-avui">
-        <span class="horari-avui-label">Avui</span>
-        <span class="horari-avui-hores">${avuiText}</span>
-      </div>
-      <details class="horari-setmana">
-        <summary>Veure horari complet de la setmana</summary>
-        <div class="horari-week">${files}</div>
-        ${sched.observacions ? `<p class="horari-obs">${sched.observacions}</p>` : ''}
-      </details>
-    `;
-  }
-
-  const contactRows = [];
-  if(h.telefon){
-    contactRows.push(`<a class="contact-row" href="tel:${h.telefon.replace(/\s+/g,'')}"><span class="contact-icon">&#9742;</span><span>${h.telefon}</span></a>`);
-  }
-  if(h.email){
-    contactRows.push(`<a class="contact-row" href="mailto:${h.email}"><span class="contact-icon">&#9993;</span><span>${h.email}</span></a>`);
-  }
-  if(h.adreca){
-    contactRows.push(`<div class="contact-row"><span class="contact-icon">&#128205;</span><span>${h.adreca}</span></div>`);
-  }
-
-  const webLink = h.web ? `
-    <a class="web-link" href="${h.web}" target="_blank" rel="noopener">
-      <span class="web-link-icon">&#128279;</span>
-      <span class="web-link-text">
-        <span class="web-link-title">Web oficial de la biblioteca</span>
-        <span class="web-link-sub">Horaris actualitzats, activitats i catàleg</span>
-      </span>
-      <span class="web-link-arrow">&rarr;</span>
-    </a>
-  ` : '';
-
-  if(!horariHtml && !contactRows.length && !webLink) return '';
+  if(!h || !h.web) return '';
 
   return `
     <div class="horaris-block">
-      ${horariHtml}
-      ${contactRows.length ? `<div class="contact-list">${contactRows.join('')}</div>` : ''}
-      ${webLink}
+      <a class="web-link" href="${h.web}" target="_blank" rel="noopener">
+        <span class="web-link-icon">&#128279;</span>
+        <span class="web-link-text">
+          <span class="web-link-title">Web oficial de la biblioteca</span>
+          <span class="web-link-sub">Horaris actualitzats, activitats i catàleg</span>
+        </span>
+        <span class="web-link-arrow">&rarr;</span>
+      </a>
     </div>
   `;
 }
@@ -337,18 +265,6 @@ function renderDetail(lib){
   if(st.properaTancament){
     const fmt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
     notice += `<div class="notice upcoming"><span class="notice-icon">&#128197;</span><span>Tancarà per vacances d'estiu del ${fmt(st.properaTancament.inici)} al ${fmt(st.properaTancament.fi)}.</span></div>`;
-  }
-
-  if(lib.avisos && lib.avisos.text){
-    notice += `
-      <div class="notice avis">
-        <span class="notice-icon">&#128276;</span>
-        <span>
-          ${lib.avisos.text}
-          <a class="avis-font" href="${lib.avisos.url}" target="_blank" rel="noopener">Font: bibliotecavirtual.diba.cat &rarr;</a>
-        </span>
-      </div>
-    `;
   }
 
   detailEl.innerHTML = `

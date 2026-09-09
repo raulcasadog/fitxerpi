@@ -365,88 +365,14 @@ h1 em{
 .notice.restricted{background:#F5EAD2; color:var(--brass-deep); border:1px solid #E4CE9C;}
 .notice.inactive{background:#ECECEA; color:#5b5b58; border:1px solid #d6d6d2;}
 .notice.upcoming{background:#E9EEF0; color:#3A5A63; border:1px solid #C7D6DA; margin-top:10px;}
-.notice.avis{background:#F5EAD2; color:#6b5220; border:1px solid #E4CE9C; margin-top:10px; flex-direction:column; gap:4px;}
 .notice-icon{font-size:16px; line-height:1;}
-.avis-font{
-  display:block;
-  margin-top:6px;
-  font-family:'Open Sans', Arial, sans-serif;
-  font-size:12px;
-  font-weight:600;
-  color:var(--brass-deep);
-  text-decoration:none;
-}
-.avis-font:hover{text-decoration:underline;}
 
-/* ---- Horaris / contacte block ---- */
+/* ---- Web link block ---- */
 .horaris-block{
   margin-top:22px;
   padding-top:22px;
   border-top:1px dashed var(--line);
-  display:flex;
-  flex-direction:column;
-  gap:14px;
 }
-.horari-avui{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:12px;
-  padding:13px 16px;
-  background:var(--paper-dark);
-  border:1px solid var(--line);
-  border-radius:9px;
-}
-.horari-avui-label{
-  font-family:'Open Sans', Arial, sans-serif;
-  font-size:12px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:var(--ink-soft);
-  font-weight:600;
-}
-.horari-avui-hores{font-size:15px; font-weight:700; text-align:right;}
-.horari-setmana summary{
-  list-style:none;
-  cursor:pointer;
-  font-family:'Open Sans', Arial, sans-serif;
-  font-size:13px;
-  color:var(--green-deep);
-  font-weight:600;
-  user-select:none;
-}
-.horari-setmana summary::-webkit-details-marker{display:none;}
-.horari-week{margin-top:10px; border-top:1px solid var(--line);}
-.horari-row{
-  display:flex;
-  justify-content:space-between;
-  gap:14px;
-  padding:8px 4px;
-  border-bottom:1px dashed var(--line);
-  font-size:13.5px;
-}
-.horari-row:last-child{border-bottom:none;}
-.horari-row.is-today{color:var(--green-deep); font-weight:700;}
-.horari-day{color:var(--ink-soft);}
-.horari-row.is-today .horari-day{color:var(--green-deep);}
-.horari-obs{
-  margin:12px 0 0;
-  font-size:13px;
-  line-height:1.5;
-  color:var(--ink-soft);
-}
-.contact-list{display:flex; flex-direction:column; gap:8px;}
-.contact-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:13.5px;
-  color:var(--ink);
-  text-decoration:none;
-}
-a.contact-row:hover{color:var(--green-deep);}
-.contact-icon{font-size:14px; flex-shrink:0; width:18px; text-align:center;}
-
 .web-link{
   display:flex;
   align-items:center;
