@@ -71,6 +71,9 @@ function normMunicipi(s) {
   t = t.replace(/,\s*(els|les|el|la|l['’])\s*$/i, ''); // treu l'article final "...,  l'"
   t = t.replace(/^l['’]\s*/i, '');                     // "L'Hospitalet" (apòstrof enganxat, sense espai)
   t = t.replace(/^(els|les|el|la)\s+/i, '');            // "El Masnou", "La Garriga"...
+  // "St."/"Sta." (com surt al nostre JSON) i "Sant"/"Santa" (com surt al directori)
+  // han de comparar igual — mateix criteri que la funció norm() d'app.js.
+  t = t.replace(/\b(st|sta)\.?(?=\s|$)/g, (m, p1) => p1 === 'sta' ? 'santa' : 'sant');
   t = t.replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
   return t;
 }
@@ -101,12 +104,14 @@ function extractRows(directoryHtml) {
       links.push({ href, text });
     }
     // Primer enllaç útil = municipi, segon = biblioteca (l'ordre de columnes del directori).
-    const pageLinks = links.filter(l => l.href.includes('bibliotecavirtual.diba.cat'));
+    // Els enllaços del directori són relatius (p. ex. href="/terrassa-biblioteca-central"),
+    // no absoluts, així que cal filtrar per "comença amb /" i afegir-hi el domini.
+    const pageLinks = links.filter(l => l.href.startsWith('/'));
     if (pageLinks.length < 2) continue;
     const [municipi, biblioteca] = pageLinks;
     if (!biblioteca.text) continue;
     if (/^bibliob[uú]s/i.test(biblioteca.text)) continue; // bibliobusos: fora d'abast per ara
-    rows.push({ municipiText: municipi.text, biblioteca: biblioteca.text, url: biblioteca.href });
+    rows.push({ municipiText: municipi.text, biblioteca: biblioteca.text, url: 'https://bibliotecavirtual.diba.cat' + biblioteca.href });
   }
   return rows;
 }
