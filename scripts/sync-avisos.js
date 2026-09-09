@@ -123,7 +123,12 @@ function matchLibraries(biblioteques, directoryRows) {
 
   for (const lib of biblioteques) {
     if (!lib.nom || !lib.nom.includes('. ')) continue; // sense format "Municipi. Biblioteca"
-    const [municipiPart, bibliotecaPart] = lib.nom.split(/\.\s+/, 2);
+    // Tallem pel DARRER ". " del nom, no pel primer: municipis com "St. Cugat" o
+    // "Sta. Coloma" ja porten un punt seu (l'abreviatura), i tallar pel primer
+    // trencava el nom just aquí ("St" + "Cugat del Vallès. Gabriel Ferrater").
+    const sepIdx = lib.nom.lastIndexOf('. ');
+    const municipiPart = lib.nom.slice(0, sepIdx);
+    const bibliotecaPart = lib.nom.slice(sepIdx + 2);
     const wantMunicipi = normMunicipi(municipiPart);
     const wantBiblioteca = normBiblioteca(bibliotecaPart);
 
