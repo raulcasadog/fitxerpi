@@ -10662,7 +10662,7 @@
   "codi": "bcg1",
   "valises": 4,
   "freq": "dilluns, dimecres i divendres",
-  "estat": "restringida",
+  "estat": "restringit",
   "observacions": "Restriccions al servei de PI: no es poden servir documents ubicats a magatzem fins a nou avís.",
   "tancament_inici": null,
   "tancament_fi": null,
