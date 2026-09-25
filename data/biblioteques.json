@@ -12880,7 +12880,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-guilleries",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-guilleries",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -12902,7 +12902,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-la-mola",
+   "web": "https://bibliotecavirtual.diba.cat/bibliobus-la-mola",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -12968,7 +12968,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-montserrat",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-montserrat",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   },
@@ -12991,7 +12991,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-pedraforca-1",
+   "web": "https://bibliotecavirtual.diba.cat/bibliobus-pedraforca",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -13013,7 +13013,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-puigdon-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-puigdon",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -13035,7 +13035,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-serra-de-bellmunt-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-serra-de-bellmunt",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -13057,7 +13057,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-serra-de-rubio-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-serra-de-rubio",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   },
@@ -13080,7 +13080,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-serra-del-cadi-1",
+   "web": "https://bibliotecavirtual.diba.cat/bibliobus-serra-del-cadi",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -13102,7 +13102,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-tagamanent-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-tagamanent",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
