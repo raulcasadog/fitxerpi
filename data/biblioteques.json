@@ -12836,7 +12836,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-el-castellot-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-el-castellot",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -12880,7 +12880,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-guilleries-1",
+   "web": "https://bibliotecavirtual.diba.cat/bibliobus-guilleries",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -12902,7 +12902,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-la-mola-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-la-mola",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -12924,7 +12924,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-montau-1",
+   "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-montau",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   }
@@ -12968,7 +12968,7 @@
    }
   ],
   "horaris": {
-   "web": "https://bibliotecavirtual.diba.cat/bibliobus-montserrat-1",
+   "web": "https://bibliotecavirtual.diba.cat/bibliobus-montserrat",
    "font": "do.diba.cat (export CSV)",
    "actualitzat": "2026-07-26"
   },
