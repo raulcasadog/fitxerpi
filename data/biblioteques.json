@@ -13042,7 +13042,7 @@
  },
  {
   "nom": "Bibliobús - Serra de Rubió",
-  "codi": "y0001",
+  "codi": "y001",
   "valises": 1,
   "freq": "dilluns i dimecres",
   "estat": "restringit",
@@ -13065,7 +13065,7 @@
  },
  {
   "nom": "Bibliobús - Serra del Cadí",
-  "codi": "y0002",
+  "codi": "y002",
   "valises": 1,
   "freq": "dimecres i divendres",
   "estat": "obert",
