@@ -4134,8 +4134,8 @@
   "codi": "ccy1",
   "valises": 4,
   "freq": "dilluns, dimarts, dimecres, dijous i divendres",
-  "estat": "restringit",
-  "observacions": "Només pot rebre PI. No pot servir peticions",
+  "estat": "tancat",
+  "observacions": "Tancada fins a nou avís pels greus desperfectes causats pels aiguats de dissabte. Servei de préstec interbibliotecari suspès.",
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 82,
@@ -4176,7 +4176,7 @@
    },
    "web_oficial": "https://www.bibliotecacerdanyola.cat/"
   },
-  "motiu": "Restricció PI"
+  "motiu": "Aiguats"
  },
  {
   "nom": "Cervelló. Biblioteca Municipal de Cervelló",
