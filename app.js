@@ -221,7 +221,11 @@ function incidenciaMeta(lib, st){
     if(lib.tancament_fi) return `Tancada · torna el ${fmt(new Date(lib.tancament_fi+'T00:00:00'))}`;
     return 'Tancada · data de reobertura no confirmada';
   }
-  if(st.status === 'restringit') return 'Restringida · només rep peticions';
+  if(st.status === 'restringit'){
+    // No totes les restriccions són "només rep": n'hi ha de parcials (p. ex. magatzem).
+    if(lib.observacions && /magatzem/i.test(lib.observacions)) return 'Restringida · no serveix documents de magatzem';
+    return 'Restringida · només rep peticions';
+  }
   if(st.status === 'no_actiu') return 'No activa a la xarxa PI';
   return truncate(lib.observacions, 60);
 }
