@@ -317,10 +317,10 @@ function renderResults(query){
 }
 
 const COLORS = {
-  obert:    {stripe:'#3D6B4F', stamp:'#3D6B4F'},
-  tancat:   {stripe:'#A13D2E', stamp:'#A13D2E'},
-  restringit:{stripe:'#B8862E', stamp:'#B8862E'},
-  no_actiu: {stripe:'#8a8a8a', stamp:'#8a8a8a'}
+  obert:    {stripe:'var(--st-obert)', stamp:'var(--st-obert)'},
+  tancat:   {stripe:'var(--st-tancat)', stamp:'var(--st-tancat)'},
+  restringit:{stripe:'var(--st-restringit)', stamp:'var(--st-restringit)'},
+  no_actiu: {stripe:'var(--st-no_actiu)', stamp:'var(--st-no_actiu)'}
 };
 
 function renderDetail(lib){
