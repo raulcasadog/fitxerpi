@@ -69,7 +69,11 @@ function renderHorarisBlock(lib){
         <span class="horari-avui-hores">${avuiText}</span>
       </div>
       <details class="horari-setmana">
-        <summary>Veure horari complet de la setmana</summary>
+        <summary>
+          <svg class="horari-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span class="horari-txt">Veure horari complet de la setmana</span>
+          <span class="horari-chev" aria-hidden="true">&#9662;</span>
+        </summary>
         <div class="horari-week">${files}</div>
         ${sched.observacions ? `<p class="horari-obs">${sched.observacions}</p>` : ''}
       </details>

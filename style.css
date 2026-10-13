@@ -406,17 +406,39 @@ h1 em{
   font-weight:600;
 }
 .horari-avui-hores{font-size:15px; font-weight:700; text-align:right;}
+.horari-setmana{
+  border:1px solid var(--line);
+  border-radius:9px;
+  overflow:hidden;
+}
 .horari-setmana summary{
   list-style:none;
   cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 16px;
+  background:rgba(61,107,79,0.12);
   font-family:'Open Sans', Arial, sans-serif;
-  font-size:13px;
+  font-size:14px;
   color:var(--green-deep);
   font-weight:600;
   user-select:none;
+  transition:background .15s ease;
 }
 .horari-setmana summary::-webkit-details-marker{display:none;}
-.horari-week{margin-top:10px; border-top:1px solid var(--line);}
+.horari-setmana summary:hover{background:rgba(61,107,79,0.2);}
+.horari-setmana summary:focus-visible{outline:2px solid var(--green); outline-offset:-2px;}
+.horari-setmana[open] summary{border-bottom:1px solid var(--line);}
+.horari-ico{width:18px; height:18px; flex:none;}
+.horari-txt{flex:1;}
+.horari-chev{font-size:12px; transition:transform .2s ease;}
+.horari-setmana[open] .horari-chev{transform:rotate(180deg);}
+.horari-week{padding:4px 12px;}
+.horari-obs{padding:0 16px 14px;}
+@media (prefers-reduced-motion:reduce){
+  .horari-setmana summary, .horari-chev{transition:none;}
+}
 .horari-row{
   display:flex;
   justify-content:space-between;
