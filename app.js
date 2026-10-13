@@ -88,7 +88,11 @@ function renderHorarisBlock(lib){
     contactRows.push(`<a class="contact-row" href="mailto:${h.email}"><span class="contact-icon">&#9993;</span><span>${h.email}</span></a>`);
   }
   if(h.adreca){
-    contactRows.push(`<div class="contact-row"><span class="contact-icon">&#128205;</span><span>${h.adreca}</span></div>`);
+    // Enllaç a Google Maps: es treuen els comentaris entre parèntesis
+    // (p. ex. "(antiga fàbrica Alchemika)") perquè no confonguin la cerca.
+    const mapsQuery = h.adreca.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
+    contactRows.push(`<a class="contact-row" href="${mapsUrl}" target="_blank" rel="noopener" aria-label="Veure ${h.adreca} a Google Maps (s'obre en una pestanya nova)"><span class="contact-icon">&#128205;</span><span>${h.adreca}</span></a>`);
   }
 
   const webLink = h.web ? `
