@@ -3,29 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 <title>Política de privacitat — Fitxer PI</title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/open-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
 <style>
-  body{font-family:'Open Sans',Arial,sans-serif; font-size:16px; max-width:680px; margin:60px auto; padding:0 20px; color:#24333B; line-height:1.6;}
-  h1{font-family:'Open Sans',Arial,sans-serif;}
-  a{color:#2A4B37;}
+  .back{display:inline-flex; align-items:center; gap:6px; font-size:15px; margin-bottom:28px;}
+  .privacy header{text-align:left; margin-bottom:28px;}
+  .privacy h1{font-size:clamp(34px, 7vw, 48px); margin:0;}
+  .privacy .card{padding:8px 36px;}
+  .privacy section{padding-block:24px; border-bottom:1px solid var(--sep);}
+  .privacy section:last-child{border-bottom:none;}
+  .privacy h2{font-size:20px; font-weight:700; letter-spacing:-0.02em; margin:0 0 8px;}
+  .privacy p{margin:0; color:var(--ink-soft); line-height:1.6; max-width:62ch;}
+  .privacy strong{color:var(--ink); font-weight:600;}
+  @media (max-width:560px){ .privacy .card{padding:4px 20px;} }
 </style>
 </head>
 <body>
-<h1>Política de privacitat</h1>
+<div class="wrap privacy">
+  <a class="back" href="index.html">&larr; Torna al cercador</a>
 
-<h2>Dades que recollim</h2>
-<p>Aquest lloc web és un cercador estàtic. No requereix registre, no fa servir galetes (cookies) ni recull cap dada personal dels usuaris.</p>
+  <header>
+    <div class="eyebrow">Fitxer PI</div>
+    <h1>Política de privacitat</h1>
+  </header>
 
-<h2>Contacte</h2>
-<p>Per a qualsevol consulta sobre aquesta pàgina, contacta amb: <strong>contacte@fitxerpi.cat</strong></p>
+  <div class="card">
+    <section>
+      <h2>Dades que recollim</h2>
+      <p>Aquest lloc web és un cercador estàtic. No requereix registre, no fa servir galetes (cookies) ni recull cap dada personal dels usuaris.</p>
+    </section>
 
-<h2>Font de les dades</h2>
-<p>Les dades de codi, valises, freqüència de recollida i estat de préstec interbibliotecari provenen dels documents que distribueix periòdicament la Unitat de Dinamització i Serveis Bibliotecaris de la Diputació de Barcelona. Els enllaços a la web oficial de cada biblioteca provenen del portal de dades obertes de la Diputació de Barcelona (do.diba.cat).</p>
+    <section>
+      <h2>Contacte</h2>
+      <p>Per a qualsevol consulta sobre aquesta pàgina, contacta amb: <strong>contacte@fitxerpi.cat</strong></p>
+    </section>
 
-<h2>Avís important</h2>
-<p>Aquest és un projecte personal, desenvolupat de manera independent i pel meu compte, a partir de documentació que rebo en la meva activitat professional habitual a la Xarxa de Biblioteques Municipals i de dades obertes de la Diputació de Barcelona. No és un servei oficial de la Diputació de Barcelona, no té cap vinculació amb l'Ajuntament de Terrassa ni amb la Biblioteca Central de Terrassa, no representa la posició de cap d'aquestes institucions, i no s'hi fa servir cap informació confidencial.</p>
+    <section>
+      <h2>Font de les dades</h2>
+      <p>Les dades de codi, valises, freqüència de recollida i estat de préstec interbibliotecari provenen dels documents que distribueix periòdicament la Unitat de Dinamització i Serveis Bibliotecaris de la Diputació de Barcelona. Els enllaços a la web oficial de cada biblioteca provenen del portal de dades obertes de la Diputació de Barcelona (do.diba.cat).</p>
+    </section>
 
-<p><a href="index.html">&larr; Torna al cercador</a></p>
+    <section>
+      <h2>Avís important</h2>
+      <p>Aquest és un projecte personal, desenvolupat de manera independent i pel meu compte, a partir de documentació que rebo en la meva activitat professional habitual a la Xarxa de Biblioteques Municipals i de dades obertes de la Diputació de Barcelona. No és un servei oficial de la Diputació de Barcelona, no té cap vinculació amb l'Ajuntament de Terrassa ni amb la Biblioteca Central de Terrassa, no representa la posició de cap d'aquestes institucions, i no s'hi fa servir cap informació confidencial.</p>
+    </section>
+  </div>
+
+  <footer>
+    Dades: Diputació de Barcelona · Prototip no oficial<br>
+    <a href="index.html">Torna al cercador</a>
+  </footer>
+</div>
 </body>
 </html>
