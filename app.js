@@ -13,6 +13,7 @@ async function loadData(){
     if(!res.ok) throw new Error('No s\'ha pogut carregar data/biblioteques.json');
     DATA = await res.json();
     renderIncidencies();
+    document.getElementById('print-week').disabled = false;
   }catch(err){
     document.getElementById('detail').innerHTML =
       `<div class="empty-state"><div class="glyph">!</div><p>No s'han pogut carregar les dades (${err.message}). Si estàs obrint el fitxer directament des del disc, prova d'executar-lo amb un servidor local o publica'l a GitHub Pages.</p></div>`;
@@ -117,11 +118,16 @@ function renderHorarisBlock(lib){
   `;
 }
 
-function effectiveStatus(lib){
+function effectiveStatus(lib, ref = today){
+  // Un tancament manual només compta a partir de tancament_inici (si n'hi ha), de manera
+  // que es pot deixar programat un tancament futur i el PDF setmanal el mostra el dia just.
+  const iniciManual = lib.tancament_inici ? new Date(lib.tancament_inici + 'T00:00:00') : null;
+  const tancatManual = lib.estat === 'tancat' && !(iniciManual && ref < iniciManual);
+
   // 1. Un tancament manual PERMANENT (estat "tancat" sense data de reobertura coneguda)
   //    sempre té prioritat: no té sentit que el calendari d'estiu li doni una data de
   //    reobertura, perquè no en sabem cap.
-  if(lib.estat === 'tancat' && !lib.tancament_fi){
+  if(tancatManual && !lib.tancament_fi){
     return {status:'tancat', label:'Tancada'};
   }
 
@@ -134,7 +140,7 @@ function effectiveStatus(lib){
       const inici = new Date(periode.inici + 'T00:00:00');
       const iniciEfectiu = diumengePrevi(inici);
       const fi = new Date(periode.fi + 'T00:00:00');
-      if(today >= iniciEfectiu && today <= fi){
+      if(ref >= iniciEfectiu && ref <= fi){
         const fmt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
         return {
           status:'tancat',
@@ -146,19 +152,19 @@ function effectiveStatus(lib){
   }
 
   // 3. Estat manual amb data de reobertura coneguda, o altres estats
-  if(lib.estat === 'tancat'){
+  if(tancatManual){
     if(lib.tancament_fi){
       const fi = new Date(lib.tancament_fi + 'T00:00:00');
-      if(today > fi){
+      if(ref > fi){
         return {status:'obert', label:'Oberta', reopened:true};
       }
       return {status:'tancat', label:'Tancada'};
     }
     return {status:'tancat', label:'Tancada'};
   }
-  if(lib.estat === 'restringit') return {status:'restringit', label:'Restringida', properaTancament: properTancamentFutur(lib)};
+  if(lib.estat === 'restringit') return {status:'restringit', label:'Restringida', properaTancament: properTancamentFutur(lib, ref)};
   if(lib.estat === 'no_actiu') return {status:'no_actiu', label:'No activa'};
-  return {status:'obert', label:'Oberta', properaTancament: properTancamentFutur(lib)};
+  return {status:'obert', label:'Oberta', properaTancament: properTancamentFutur(lib, ref)};
 }
 
 // Si un tancament comença en dilluns, el diumenge anterior ja es considera tancat
@@ -182,12 +188,12 @@ function periodesEstiuVigents(lib){
 
 // Busca el proper període de tancament d'estiu que encara no ha començat,
 // per avisar amb antelació encara que la biblioteca estigui oberta ara mateix.
-function properTancamentFutur(lib){
+function properTancamentFutur(lib, ref = today){
   const periodes = periodesEstiuVigents(lib);
   if(!periodes || !periodes.length) return null;
   const futurs = periodes
     .map(p => ({inici: new Date(p.inici + 'T00:00:00'), fi: new Date(p.fi + 'T00:00:00')}))
-    .filter(p => diumengePrevi(p.inici) > today)
+    .filter(p => diumengePrevi(p.inici) > ref)
     .sort((a,b) => a.inici - b.inici);
   return futurs.length ? futurs[0] : null;
 }
@@ -217,12 +223,12 @@ function motiuTag(lib, st){
   return 'Nota';
 }
 
-function incidenciaMeta(lib, st){
+function incidenciaMeta(lib, st, ref = today){
   const fmt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
   if(st.motiuEstiu){
     const periode = (periodesEstiuVigents(lib) || [])
       .map(p => ({inici: new Date(p.inici+'T00:00:00'), fi: new Date(p.fi+'T00:00:00')}))
-      .find(p => today >= diumengePrevi(p.inici) && today <= p.fi);
+      .find(p => ref >= diumengePrevi(p.inici) && ref <= p.fi);
     if(periode) return `Tancada · torna el ${fmt(periode.fi)}`;
   }
   if(st.status === 'tancat'){
@@ -421,6 +427,125 @@ document.addEventListener('click', (e) => {
   if(!e.target.closest('.search-wrap') && !e.target.closest('#results')){
     resultsEl.classList.remove('show');
   }
+});
+
+// ============================================================
+// Full setmanal imprimible: biblioteques on no es pot demanar PI
+// ------------------------------------------------------------
+// Es genera al moment amb la mateixa lògica d'estat que la resta del web
+// (effectiveStatus amb una data de referència per a cada dia) i s'imprimeix
+// amb window.print(): l'usuari tria "Desa com a PDF". Sense llibreries.
+// ============================================================
+
+const SHEET_SYMBOL = {
+  tancat:     {glyph:'■', title:'Tancada'},
+  restringit: {glyph:'▲', title:'Restringida'},
+  no_actiu:   {glyph:'✕', title:'No activa'}
+};
+const DIES_CURTS = ['Dg', 'Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds'];
+
+// Dilluns a divendres de la setmana actual. En cap de setmana, la setmana vinent.
+function setmanaLaborable(ref = today){
+  const dilluns = new Date(ref);
+  const dow = ref.getDay();
+  dilluns.setDate(ref.getDate() + (dow === 0 ? 1 : dow === 6 ? 2 : 1 - dow));
+  return [0, 1, 2, 3, 4].map(i => {
+    const d = new Date(dilluns);
+    d.setDate(dilluns.getDate() + i);
+    return d;
+  });
+}
+
+function escHtml(t){
+  return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+function filesSetmana(dies){
+  return DATA
+    .map(lib => {
+      const estats = dies.map(d => effectiveStatus(lib, d));
+      const primer = estats.findIndex(st => st.status !== 'obert');
+      if(primer === -1) return null;
+      const st = estats[primer];
+      // A la taula el símbol ja diu si és tancada o restringida: només en deixem el detall.
+      const meta = incidenciaMeta(lib, st, dies[primer]).replace(/^(Tancada|Restringida) · /, '');
+      return {lib, estats, motiu: motiuTag(lib, st), meta};
+    })
+    .filter(Boolean)
+    .sort((a, b) => {
+      // Per codi PI (com a Sierra); les que no en tenen, al final per nom.
+      const ca = a.lib.codi || '￿', cb = b.lib.codi || '￿';
+      return ca.localeCompare(cb, 'ca') || a.lib.nom.localeCompare(b.lib.nom, 'ca');
+    });
+}
+
+function renderFullSetmanal(){
+  const dies = setmanaLaborable();
+  const files = filesSetmana(dies);
+  const fmtLlarg = d => d.toLocaleDateString('ca-ES', {day:'numeric', month:'long'});
+  const fmtCurt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
+  const any = dies[4].getFullYear();
+  const avuiIdx = dies.findIndex(d => d.getTime() === today.getTime());
+
+  const capDies = dies.map((d, i) => `
+    <th class="fp-dia${i === avuiIdx ? ' fp-avui' : ''}">${DIES_CURTS[d.getDay()]}<span>${d.getDate()}</span></th>
+  `).join('');
+
+  const cos = files.length ? files.map(({lib, estats, motiu, meta}) => `
+    <tr>
+      <td class="fp-codi">${escHtml(lib.codi) || '—'}</td>
+      <td class="fp-nom">${escHtml(lib.nom)}</td>
+      ${estats.map((st, i) => {
+        const sym = SHEET_SYMBOL[st.status];
+        const cls = `fp-cel${i === avuiIdx ? ' fp-avui' : ''}`;
+        return sym
+          ? `<td class="${cls} fp-${st.status}" title="${sym.title}">${sym.glyph}</td>`
+          : `<td class="${cls}"></td>`;
+      }).join('')}
+      <td class="fp-motiu"><b>${escHtml(motiu)}</b>${meta ? ` · ${escHtml(meta)}` : ''}</td>
+    </tr>
+  `).join('') : `<tr><td colspan="8" class="fp-buit">Cap incidència prevista aquesta setmana: totes les biblioteques accepten PI.</td></tr>`;
+
+  const generat = new Date().toLocaleString('ca-ES', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
+
+  document.getElementById('full-pi').innerHTML = `
+    <header class="fp-head">
+      <div class="fp-marca">Fitxer PI · fitxerpi.cat</div>
+      <h2>Biblioteques on no es pot demanar PI</h2>
+      <p>Setmana del dilluns ${fmtLlarg(dies[0])} al divendres ${fmtLlarg(dies[4])} de ${any} · ${files.length} biblioteque${files.length === 1 ? 'a' : 's'}</p>
+    </header>
+    <table class="fp-taula">
+      <thead><tr><th>Codi</th><th>Biblioteca</th>${capDies}<th>Motiu</th></tr></thead>
+      <tbody>${cos}</tbody>
+    </table>
+    <div class="fp-llegenda">
+      <span><b class="fp-tancat">■</b> Tancada</span>
+      <span><b class="fp-restringit">▲</b> Restringida (no serveix o serveix parcialment)</span>
+      <span><b class="fp-no_actiu">✕</b> No activa</span>
+      <span>Casella buida: accepta PI</span>
+    </div>
+    <p class="fp-nota">Generat el ${generat} a partir de les dades de la Diputació de Barcelona. No inclou els avisos puntuals de bibliotecavirtual.diba.cat (festius locals, vagues…): consulteu la fitxa de cada biblioteca. Prototip no oficial.</p>
+  `;
+
+  return `Biblioteques sense PI - setmana del ${fmtCurt(dies[0]).replace('/', '-')}-${any}`;
+}
+
+const printBtn = document.getElementById('print-week');
+let titolOriginal = document.title;
+
+printBtn.addEventListener('click', () => {
+  if(!DATA.length) return;
+  titolOriginal = document.title;
+  // El títol del document és el nom de fitxer que proposa "Desa com a PDF".
+  document.title = renderFullSetmanal();
+  document.body.classList.add('print-pi');
+  window.print();
+});
+
+window.addEventListener('afterprint', () => {
+  if(!document.body.classList.contains('print-pi')) return;
+  document.body.classList.remove('print-pi');
+  document.title = titolOriginal;
 });
 
 loadData();

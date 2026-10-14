@@ -38,6 +38,14 @@
     </div>
 
     <div id="incidencies"></div>
+
+    <div class="print-wrap">
+      <button type="button" id="print-week" class="print-btn" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+        Descarregar PDF de la setmana
+      </button>
+      <p class="print-hint">Biblioteques on no es pot demanar PI de dilluns a divendres, amb el seu codi.</p>
+    </div>
   </main>
 
   <footer>
@@ -45,6 +53,8 @@
     <a href="privacy.html">Política de privacitat</a>
   </footer>
 </div>
+
+<section id="full-pi" aria-hidden="true"></section>
 
 <script src="app.js" defer></script>
 </body>
