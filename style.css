@@ -82,6 +82,8 @@ h1{
   margin:0 0 14px;
 }
 h1 em{font-style:normal; color:var(--accent);}
+.home-link{color:inherit; text-decoration:none; cursor:pointer; border-radius:8px;}
+.home-link:focus-visible{outline:2px solid var(--accent); outline-offset:4px;}
 .sub{font-size:19px; line-height:1.42; color:var(--ink-soft); max-width:34em; margin:0 auto; text-wrap:balance;}
 
 /* ---- Cerca ---- */

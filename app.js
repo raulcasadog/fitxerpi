@@ -401,13 +401,29 @@ function renderDetail(lib){
 searchInput.addEventListener('input', (e) => renderResults(e.target.value));
 searchInput.addEventListener('focus', (e) => { if(e.target.value) renderResults(e.target.value); });
 
-clearBtn.addEventListener('click', () => {
+// Deixa la pàgina com acabada d'obrir: sense cerca, resultats ni fitxa de detall.
+function resetCerca(){
   searchInput.value = '';
   updateClearBtn();
   resultsEl.classList.remove('show');
   resultsEl.innerHTML = '';
   countTag.textContent = '';
+  detailEl.innerHTML = '';
+}
+
+clearBtn.addEventListener('click', () => {
+  resetCerca();
   searchInput.focus();
+});
+
+// Clicar "Fitxer PI" a la capçalera torna a l'inici sense recarregar.
+// L'enllaç (href="./") és la reserva si el JavaScript falla.
+document.getElementById('home-link').addEventListener('click', (e) => {
+  if(e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // nova pestanya, etc.
+  e.preventDefault();
+  resetCerca();
+  incidenciesEl.querySelector('details')?.removeAttribute('open');
+  window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
 resultsEl.addEventListener('click', (e) => {
