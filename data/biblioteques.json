@@ -4082,10 +4082,10 @@
   "codi": "oct1",
   "valises": 2,
   "freq": "dimarts i divendres",
-  "estat": "tancat",
-  "observacions": "Tancada fins el 16 d'agost",
+  "estat": "obert",
+  "observacions": "",
   "tancament_inici": null,
-  "tancament_fi": "2026-08-16",
+  "tancament_fi": null,
   "id": 81,
   "tancaments_estiu": [
    {
@@ -4093,7 +4093,6 @@
     "fi": "2026-08-14"
    }
   ],
-  "motiu": "Vacances d'estiu",
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/centelles-biblioteca-palau-dels-comtes-de-centelles",
    "telefon": "938 81 03 34",
