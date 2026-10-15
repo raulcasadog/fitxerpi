@@ -39,16 +39,10 @@
   "valises": null,
   "freq": "a demanda (NO VALISA)",
   "estat": "obert",
-  "observacions": "Consulteu el \"Protocol\" de préstec. Durant el tancament d'estiu (31/07 al 31/08/2026) ofereixen préstec prolongat.",
+  "observacions": "Consulteu el \"Protocol\" de préstec.",
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 4,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-31",
-    "fi": "2026-08-31"
-   }
-  ],
   "motiu": "Nota operativa"
  },
  {
@@ -73,12 +67,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 6,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-ciutat-vella-biblioteca-barceloneta-la-fraternitat",
    "telefon": "932 253 574",
@@ -283,12 +271,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 10,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-sarria-sant-gervasi-biblioteca-clara",
    "telefon": "932 801 547",
@@ -428,13 +410,7 @@
     "observacions": "L'horari d'estiu comença el dia: 24 de juny Observacions de l'horari: Amb motiu de la convocatòria de vaga, els horaris i els serveis de la biblioteca es poden veure afectats. Es recomana contactar prèviament amb la biblioteca, telefònicament o per correu electrònic, per confirmar-ne l’horari d’obertura i la disponibilitat dels serveis. Per vacances d'estiu, la biblioteca romandrà tancada de l'1 al 31 d'agost, tots dos inclosos. La bústia de retorn també romandrà tancada durant les mateixes dates. * La biblioteca romandrà tancada els següents dies: - 24 de juny (Sant Joan) - 11 de setembre (Diada Nacional de Catalunya) - 24 de setembre (Mare de Déu de la Mercè) Horari especial: - El 23 de juny la biblioteca obrirà de 9.30 h a 13.30 h."
    },
    "web_oficial": "https://www.bcn.cat/bibelcarmel"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ]
+  }
  },
  {
   "nom": "Barcelona. El Clot-Josep Benet",
@@ -482,19 +458,7 @@
     "observacions": "L'horari d'estiu comença el dia: 24 de juny Observacions de l'horari: Amb motiu de la convocatòria de vaga, els horaris i els serveis de la biblioteca es poden veure afectats. Es recomana contactar prèviament amb la biblioteca, telefònicament o per correu electrònic, per confirmar-ne l’horari d’obertura i la disponibilitat dels serveis. * La biblioteca romandrà tancada els següents dies festius: 23 de juny (festa CBB) oberta de 9:30 a 13:30 h, tancada a la tarda. 24 de juny (Sant Joan) 11 de setembre (Diada Nacional de Catalunya) 24 de setembre (Mare de Déu de la Mercè) La biblioteca romandrà tancada de l'1 al 31 d'agost."
    },
    "web_oficial": "http://www.bcn.cat/bibelclot"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
-  "tancaments_estiu_web": [
-   {
-    "inici": "2026-08-01",
-    "fi": "2026-08-31"
-   }
-  ]
+  }
  },
  {
   "nom": "Barcelona. Esquerra Eixample-Agustí Centelles",
@@ -554,12 +518,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 15,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-eixample-biblioteca-fort-pienc-ana-maria-moix",
    "telefon": "932 652 435",
@@ -758,12 +716,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 19,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-ciutat-vella-biblioteca-gotic-andreu-nin",
    "telefon": "933 437 369",
@@ -866,12 +818,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 21,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-horta-guinardo-biblioteca-horta-can-mariner",
    "telefon": "934 208 285",
@@ -1017,12 +963,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 24,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-eixample-biblioteca-joan-miro",
    "telefon": "934 263 532",
@@ -1155,13 +1095,7 @@
     "observacions": "L'horari d'estiu comença el dia: 24 de juny Observacions de l'horari: Amb motiu de la convocatòria de vaga, els horaris i els serveis de la biblioteca es poden veure afectats. Es recomana contactar prèviament amb la biblioteca, telefònicament o per correu electrònic, per confirmar-ne l’horari d’obertura i la disponibilitat dels serveis. * La biblioteca romandrà tancada els següents dies: 1 a 31 d'agost , ambdós inclosos (Vacances d'estiu) 11 de setembre (Diada Nacional de Catalunya) 24 de setembre (La Mercè, festa de local) El dia 23 de juny , la biblioteca farà un horari especial: de 9.30 a 13.30 h"
    },
    "web_oficial": "https://www.barcelona.cat/bibmllongueras"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-01",
-    "fi": "2026-08-31"
-   }
-  ]
+  }
  },
  {
   "nom": "Barcelona. Les Roquetes-Rafa Juncadella",
@@ -1219,12 +1153,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 28,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-horta-guinardo-biblioteca-montbau-albert-perez-baro",
    "telefon": "934 270 747",
@@ -1327,12 +1255,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 30,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-13",
-    "fi": "2026-07-17"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-nou-barris-biblioteca-aurora-diaz-plaja",
    "telefon": "932 914 850",
@@ -1382,12 +1304,6 @@
   "tancament_fi": null,
   "id": 31,
   "motiu": "Obres",
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-sants-montjuic-biblioteca-poble-sec-francesc-boix",
    "telefon": "934 430 105",
@@ -1496,12 +1412,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 33,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-02"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-sant-marti-biblioteca-el-besos-i-el-maresme-ramon-d-alos-moner",
    "telefon": "932 564 929",
@@ -1604,12 +1514,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 35,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-eixample-biblioteca-sant-antoni-joan-oliver",
    "telefon": "933 297 216",
@@ -1802,12 +1706,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 39,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-eixample-biblioteca-sofia-barat",
    "telefon": "932 317 767",
@@ -1856,12 +1754,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 40,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-sant-andreu-biblioteca-trinitat-vella-j-barbero",
    "telefon": "937 064 002",
@@ -1911,12 +1803,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 41,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/barcelona-gracia-biblioteca-vallcarca-i-els-penitents-m-antonieta-cot",
    "telefon": "93 211 23 51",
@@ -2223,12 +2109,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 47,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-23"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/abrera-biblioteca-josep-roca-i-bros",
    "telefon": "937 700 881",
@@ -2313,13 +2193,7 @@
     "observacions": "L'horari d'estiu comença el dia: 01 de juny"
    },
    "web_oficial": "http://www.aiguafreda.cat/"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-23"
-   }
-  ]
+  }
  },
  {
   "nom": "Alella. Ferrer i Guàrdia",
@@ -2379,12 +2253,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 50,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ametlla-del-valles-l-biblioteca-josep-badia-i-moret",
    "telefon": "938 431 966 / 638 619 775",
@@ -2529,12 +2397,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 53,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-23"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/artes-biblioteca",
    "telefon": "938 305 002",
@@ -2583,12 +2445,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 54,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/avinyo-biblioteca",
    "telefon": "938 387 101",
@@ -2691,12 +2547,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 56,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/badalona-biblioteca-canyado-i-casagemes-joan-argente",
    "telefon": "934 614 789",
@@ -2751,12 +2601,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 57,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-02"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/badalona-biblioteca-llefia-xavier-soto",
    "telefon": "933 832 970",
@@ -2811,12 +2655,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 58,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-01"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/badalona-biblioteca-lloreda",
    "telefon": "933 873 175",
@@ -2908,12 +2746,6 @@
    },
    "web_oficial": "https://badabiblios.cat"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-01"
-   }
-  ],
   "avisos": {
    "text": "La Biblioteca de Pomar es va inaugurar l'any 1987, des de llavors presta servei al barri de Pomar de Badalona. La Biblioteca forma part de la Xarxa Municipal de Biblioteques de Badalona, que consta de 6 biblioteques. Des de l'octubre del 2007 es va incorporar a la Xarxa de Biblioteques Municipals de la Diputació de Barcelona. La Biblioteca disposa d'uns 250m2, i els serveis que presta són els habituals de totes les biblioteques públiques: informació, prèstec de documents, connexió gratuïta a Internet, zona Wi-Fi, formació i suport, i diferents activitats tant per a adults com per a infants. Horaris:",
    "font": "bibliotecavirtual.diba.cat",
@@ -2931,12 +2763,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 60,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-01"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/badalona-biblioteca-sant-roc",
    "telefon": "934 601 257",
@@ -3145,12 +2971,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 64,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/begues-la-ginesta",
    "telefon": "936392808",
@@ -3253,12 +3073,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 66,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-29"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bigues-i-riells-del-fai-biblioteca",
    "telefon": "938 657 982",
@@ -3361,12 +3175,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 68,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-29"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/cabrera-de-mar-biblioteca-ilturo",
    "telefon": "937 542 949",
@@ -3421,12 +3229,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 69,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/cabrils-biblioteca",
    "telefon": "937 531 186",
@@ -3529,12 +3331,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 71,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/caldes-de-montbui-biblioteca",
    "telefon": "938 626 756 / 683 267 016",
@@ -3691,12 +3487,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 74,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-29"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/canovelles-biblioteca-frederica-montseny",
    "telefon": "938 618 980",
@@ -3751,12 +3541,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 75,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/capellades-biblioteca-el-safareig",
    "telefon": "938 011 781",
@@ -3865,12 +3649,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 77,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/cardona-biblioteca-marc-de-cardona",
    "telefon": "938 684 938",
@@ -3979,12 +3757,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 79,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/castellbisbal-biblioteca-josep-mateu-i-miro",
    "telefon": "93 611 88 81",
@@ -4087,12 +3859,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 81,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-13",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/centelles-biblioteca-palau-dels-comtes-de-centelles",
    "telefon": "938 81 03 34",
@@ -4190,12 +3956,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 83,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-02"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/cervello-biblioteca-municipal-de-cervello",
    "telefon": "936 601 198",
@@ -4250,12 +4010,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 84,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/collbato-biblioteca-sibilla-durfort",
    "telefon": "937 779 341",
@@ -4443,12 +4197,6 @@
    },
    "web_oficial": "https://biblioteques.cornella.cat/"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-13",
-    "fi": "2026-08-31"
-   }
-  ],
   "avisos": {
    "text": "La Biblioteca Clara Campoamor compta amb 1.057 metres quadrats distribuïts en una sola planta on s’integren tots els serveis. L’edifici es troba davant de la parada del Tram “Fontsanta-Fatjó”, a les portes del parc del Canal de la Infanta, i des de dins es pot gaudir tant de la llum natural com del paisatge. A més dels serveis habituals de biblioteca, està equipada amb una sala polivalent, un espai de suport per a grups, un espai d’experimentació BiblioLab i un espai exterior destinat a realitzar actes i programacions culturals a l’aire lliure.…",
    "font": "bibliotecavirtual.diba.cat",
@@ -4562,12 +4310,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 90,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-13",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/cornella-de-llobregat-biblioteca-teresa-pamies",
    "telefon": "936 345 502",
@@ -4622,12 +4364,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 91,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/cubelles-biblioteca-mn-joan-avinyo",
    "telefon": "938 952 387 | 610 480 268",
@@ -4676,12 +4412,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 92,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/esparreguera-biblioteca-municipal-l-ateneu",
    "telefon": "93 777 13 39",
@@ -4736,12 +4466,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 93,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/esplugues-de-llobregat-biblioteca-pare-miquel-d-esplugues",
    "telefon": "933 719 119",
@@ -4826,13 +4550,7 @@
     "observacions": "L'horari d'estiu comença el dia: 29 de juny Observacions de l'horari:"
    },
    "web_oficial": "https://www.lesfranqueses.cat/les-franqueses-del-valles/equipaments-municipals/biblioteca-municipal"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ]
+  }
  },
  {
   "nom": "Franqueses Vallès, Les. Biblioteca. Corró d'Avall",
@@ -4844,12 +4562,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 95,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/franqueses-del-valles-les-corro-d-avall",
    "telefon": "935 661 550",
@@ -5000,12 +4712,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 98,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/gava-biblioteca-marian-colome",
    "telefon": "93 638 36 61",
@@ -5048,12 +4754,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 99,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/gironella-biblioteca",
    "telefon": "938 228 013",
@@ -5593,12 +5293,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 110,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/llagosta-la-biblioteca-municipal",
    "telefon": "935 451 541",
@@ -5683,13 +5377,7 @@
     "observacions": "L'horari d'estiu comença el dia: 15 de juny Observacions de l'horari: A part de les festes generals que marca el calendari vigent a Catalunya, durant l'any 2026 la biblioteca estarà tancada els següents dies: - 22 i 23 de juny Vacances: del 3 al 28 d'agost Festiu local: 10 de setembre"
    },
    "web_oficial": "https://bibliotecallicamunt.wordpress.com/"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ]
+  }
  },
  {
   "nom": "Llinars del Vallès. Can Casas",
@@ -5701,12 +5389,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 112,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/llinars-del-valles-biblioteca-can-casas",
    "telefon": "938 413 448",
@@ -5809,12 +5491,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 114,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/manlleu-biblioteca",
    "telefon": "938 511 486",
@@ -5863,12 +5539,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 115,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/manresa-biblioteca-ateneu-les-bases",
    "telefon": "662 60 69 77 / 93 515 30 31",
@@ -5965,12 +5635,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 117,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-16"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/martorell-biblioteca-francesc-pujols",
    "telefon": "937 756 060",
@@ -6019,12 +5683,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 118,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/martorelles-biblioteca-lolita-mila",
    "telefon": "935 704 437",
@@ -6133,12 +5791,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 120,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/masquefa-biblioteca-maria-carme-junyent-figueras",
    "telefon": "937 727 873",
@@ -6187,12 +5839,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 121,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/matadepera-biblioteca-angel-guimera",
    "telefon": "937 300 192",
@@ -6560,12 +6206,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 128,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/montcada-i-reixac-biblioteca-can-sant-joan",
    "telefon": "935751901",
@@ -6662,12 +6302,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 130,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/montgat-biblioteca-tirant-lo-blanc",
    "telefon": "934 690 098",
@@ -6716,12 +6350,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 131,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/montmelo-biblioteca-la-grua",
    "telefon": "935 720 583",
@@ -6770,12 +6398,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 132,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/montornes-del-valles-biblioteca-rosa-leveroni",
    "telefon": "935 686 530",
@@ -6830,12 +6452,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 133,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-17",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/navarcles-biblioteca-sant-valenti",
    "telefon": "938 276 719",
@@ -6884,12 +6500,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 134,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-26"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/navas-biblioteca-josep-mas-carreras",
    "telefon": "938 204 973",
@@ -6938,12 +6548,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 135,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/odena-biblioteca-l-atzavara",
    "telefon": "937 006 630",
@@ -7095,16 +6699,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 138,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-23"
-   },
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/palau-solita-i-plegamans-biblioteca-l-alzina",
    "telefon": "935 188 652",
@@ -7213,12 +6807,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 140,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/papiol-el-biblioteca-valenti-almirall",
    "telefon": "936 732 246",
@@ -7267,12 +6855,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 141,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/parets-del-valles-biblioteca-can-rajoler",
    "telefon": "935 739 801",
@@ -7375,12 +6957,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 143,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-27",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/pineda-de-mar-biblioteca-del-poblenou",
    "telefon": "937 662 016",
@@ -7435,12 +7011,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 144,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-27",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/pineda-de-mar-biblioteca-m-serra-i-moret",
    "telefon": "937 623 796",
@@ -7495,12 +7065,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 145,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/polinya-biblioteca-neus-catala",
    "telefon": "937 13 06 72",
@@ -7549,12 +7113,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 146,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/pont-de-vilomara-i-rocafort-el-biblioteca",
    "telefon": "938 318 324",
@@ -7663,12 +7221,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 148,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/premia-de-dalt-biblioteca-jaume-perich-i-escala",
    "telefon": "936931585 / 678737051",
@@ -7723,12 +7275,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 149,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/premia-de-mar-biblioteca-marti-rossello-i-lloveras",
    "telefon": "937 510 145",
@@ -7837,16 +7383,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 151,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-23"
-   },
-   {
-    "inici": "2026-08-31",
-    "fi": "2026-09-01"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ripollet-biblioteca",
    "telefon": "935 864 230",
@@ -7895,12 +7431,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 152,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/roca-del-valles-la-biblioteca",
    "telefon": "938 424 461. WhatsApp: 674640308",
@@ -7997,12 +7527,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 154,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/rubi-biblioteca-mestre-marti-tauler",
    "telefon": "93 699 84 53 / 93 588 70 00 #6820",
@@ -8051,12 +7575,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 155,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sabadell-biblioteca-can-puiggener",
    "telefon": "93 7165150 / 682607822",
@@ -8111,12 +7629,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 156,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sabadell-biblioteca-dels-safareigs",
    "telefon": "93 717 53 43",
@@ -8208,12 +7720,6 @@
    },
    "web_oficial": "https://www.sabadell.cat/ca/biblioteques/biblioteca-de-la-serra"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
-   }
-  ],
   "avisos": {
    "text": "La Biblioteca de La Serra és la biblioteca del Districte 7è de Sabadell. Dóna servei als barris de Torre Romeu, Can Roqueta, Poblenou i Raval d'Amàlia. És un equipament municipal de proximitat que treballa en xarxa amb la resta de Biblioteques Municipals de Sabadell i col·labora amb altres equipaments i entitats del districte i de la ciutat. La biblioteca es va inaugurar el 8 d'abril del 2006. L'equipament ocupa una superfície total de 537 m2 i disposa de 86 punts de lectura i treball. L'espai està distribuït en una única planta, amb les següents àrees: infantil i petits lectors, general, música i cinema, i premsa i revistes.…",
    "font": "bibliotecavirtual.diba.cat",
@@ -8231,12 +7737,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 158,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sabadell-biblioteca-del-nord",
    "telefon": "937 246 401",
@@ -8288,12 +7788,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 159,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sabadell-biblioteca-de-ponent",
    "telefon": "937 173 974",
@@ -8348,12 +7842,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 160,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sabadell-biblioteca-del-sud",
    "telefon": "937 205 174",
@@ -8499,12 +7987,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 163,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-adria-de-besos-biblioteca",
    "telefon": "934 621 479",
@@ -8613,12 +8095,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 165,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-andreu-de-la-barca-biblioteca-aiguestoses",
    "telefon": "936 824 000",
@@ -8721,12 +8197,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 167,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/es/sant-antoni-de-vilamajor-biblioteca-municipal-joana-raspall-i-juanola",
    "telefon": "938 453 077",
@@ -8834,12 +8304,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 169,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-boi-de-llobregat-biblioteca-maria-aurelia-capmany",
    "telefon": "936 306 463",
@@ -8942,12 +8406,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 171,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-climent-de-llobregat-biblioteca-ca-l-altisent",
    "telefon": "931 151 256 / 673 688 097 (whatsapp)",
@@ -9050,12 +8508,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 173,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-cugat-del-valles-biblioteca-mira-sol-marta-pessarrodona",
    "telefon": "935 657 097",
@@ -9141,12 +8593,6 @@
    },
    "web_oficial": "https://www.santcugat.cat/web/biblioteques"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "avisos": {
    "text": "El servei de préstec tanca a les 13.50 h al matí i a les 20.20 h a la tarda. Horaris:",
    "font": "bibliotecavirtual.diba.cat",
@@ -9201,12 +8647,6 @@
    },
    "web_oficial": "http://www.sesrovires.cat/el-municipi/guia-de-sant-esteve/equipaments/biblioteca-joan-pomar-i-sola.html"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-30"
-   }
-  ],
   "avisos": {
    "text": "Festius 2026: Del 2 al 6 d'abril (Setmana Santa) 1 i 2 de maig (Festa del Treball) 24 de juny (Sant Joan) 24 o 31 de juliol (Festa Major) Del 10 al 30 d'agost (vacances d'estiu) 11 i 12 de setembre (Diada Nacional de Catalunya) Del 15 al 17 d’octubre (Dia de la Hispanitat) 7 i 8 de desembre (Pont de la Constitució / La Immaculada) Del 24 al 26 de desembre / Del 31 de desembre al 2 de gener (Nadal) Et convidem a conèixer els serveis digitals de la Biblioteca Virtual Trencadís . Fons local digitalitzat Xarxa de Biblitoeques Municiapls eBiblio . Préstec de llibres, revistes, premsa i pel·lícules Webs i Bases de dades .…",
    "font": "bibliotecavirtual.diba.cat",
@@ -9332,12 +8772,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 178,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-feliu-sasserra-biblioteca-sant-pere-almato",
    "telefon": "938 819 288",
@@ -9392,12 +8826,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 179,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-fost-de-campsentelles-biblioteca-jordi-ribas",
    "telefon": "935 796 981",
@@ -9494,12 +8922,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 181,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-hipolit-de-voltrega-biblioteca-marques-de-remisa",
    "telefon": "938 571 627",
@@ -9548,12 +8970,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 182,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-joan-de-vilatorrada-biblioteca-cal-gallifa",
    "telefon": "938 767 705",
@@ -9639,12 +9055,6 @@
    },
    "web_oficial": "https://sites.google.com/view/bibsjdmr/inici"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "avisos": {
    "text": "FESTIUS 2026 DURANT ELS QUALS LA BIBLIOTECA ROMANDRÀ TANCADA: Dijous 1 i dimarts 6 de gener. Divendres 3, dissabte 4 i dilluns 6 d'abril. Divendres 1, dissabte 2 i dilluns 25 de4 maig. Dimecres 24 de juny. Divendres 11 i dijous 24 de setembre Dilluns 12 d'octubre. Dilluns 7, dimarts 8, divendres 25 i dissabte 26 de desembre. HORARI ESPECIAL DE MATÍ DE 10 H. A 14:00 H: - Dijous 2 abril (Setmana Santa). -Dimarts 23 de juny. - Divendres 3, 10, 17 i 24 i 31 de juliol. - Divendres 21 i 28 d'agost. - Dijous 24 i 31 de desembre. - Dimarts 5 de gener (2027). Tancat per vacances de l'1 al 15 d'agost ambdós inclosos. Horaris:",
    "font": "bibliotecavirtual.diba.cat",
@@ -9662,12 +9072,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 184,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-17",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-joan-despi-biblioteca-miquel-marti-i-pol",
    "telefon": "934 771 282",
@@ -9770,12 +9174,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 186,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-just-desvern-biblioteca-joan-margarit",
    "telefon": "934 756 300",
@@ -9830,12 +9228,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 187,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-marti-sarroca-biblioteca-neus-catala-i-palleja",
    "telefon": "931313793",
@@ -9890,12 +9282,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 188,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-17",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-pere-de-ribes-biblioteca-josep-pla",
    "telefon": "938 965 725",
@@ -9944,12 +9330,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 189,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-pere-de-ribes-biblioteca-manuel-de-pedrolo",
    "telefon": "938 964 020",
@@ -9998,12 +9378,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 190,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-pere-de-riudebitlles-biblioteca-maria-angels-torrents-i-roses",
    "telefon": "936 558 218",
@@ -10089,12 +9463,6 @@
    },
    "web_oficial": "https://www.stpere.cat/"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "avisos": {
    "text": "FESTIUS 2026 La Biblioteca romandrà tancada els següents dies: L'1 de maig El 24 de juny L'11 i 28 de setembre El 8 de desembre Horaris:",
    "font": "bibliotecavirtual.diba.cat",
@@ -10166,12 +9534,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 193,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-01"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-quinti-de-mediona-biblioteca-joan-sarda-i-lloret",
    "telefon": "938 998 152 - 627072281",
@@ -10220,12 +9582,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 194,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-quirze-de-besora-biblioteca-pompeu-fabra",
    "telefon": "938 550 263",
@@ -10311,12 +9667,6 @@
    },
    "web_oficial": "https://www.santquirzevalles.cat/temes/biblioteca"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "motiu": "Restricció PI"
  },
  {
@@ -10329,12 +9679,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 196,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-sadurni-d-anoia-biblioteca-ramon-bosch-de-noya",
    "telefon": "938 912 033",
@@ -10383,12 +9727,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 197,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sant-vicenc-de-castellet-biblioteca-salvador-vives-casajuana",
    "telefon": "938 330 856",
@@ -10491,12 +9829,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 199,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sant-vicenc-dels-horts-biblioteca-les-voltes",
    "telefon": "936 560 663",
@@ -10551,12 +9883,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 200,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/santa-coloma-de-cervello-biblioteca-pilarin-bayes",
    "telefon": "936 341 358",
@@ -10611,12 +9937,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 201,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-13",
-    "fi": "2026-07-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/santa-coloma-de-gramenet-biblioteca-can-peixauet",
    "telefon": "934 665 270 / 637 737 553",
@@ -10779,12 +10099,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 204,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-02"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/santa-coloma-de-gramenet-biblioteca-singuerlin-salvador-cabre",
    "telefon": "93 468 26 97",
@@ -10876,12 +10190,6 @@
    },
    "web_oficial": "https://www.bibliotecadesantaeulaliaderoncana.cat/"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "avisos": {
    "text": "La biblioteca ofereix els següents serveis: · Préstec de documents i préstec Interbibliotecari. · Devolució de documents a través de la bústia exterior de retorns 24 h. · Informació i consultes bibliogràfiques. · Accés lliure a la col·lecció i als espais, amb WiFi per estudiar i treballar. · Accés als ordinadors d’internet i +, i servei d’impressions. Horaris:",
    "font": "bibliotecavirtual.diba.cat",
@@ -10953,12 +10261,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 207,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-24"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/santa-margarida-de-montbui-biblioteca-mont-agora",
    "telefon": "938 052 666",
@@ -11013,12 +10315,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 208,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/santa-maria-de-palautordera-biblioteca-ferran-soldevila",
    "telefon": "93 848 26 88",
@@ -11073,12 +10369,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 209,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-29"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/santa-perpetua-de-mogoda-biblioteca-josep-jardi",
    "telefon": "935606222",
@@ -11127,12 +10417,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 210,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/santa-susanna-biblioteca-vall-d-alfata",
    "telefon": "937 679 502",
@@ -11181,12 +10465,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 211,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/santpedor-biblioteca-pare-ignasi-casanovas",
    "telefon": "93 832 04 80",
@@ -11235,12 +10513,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 212,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/sentmenat-biblioteca-frederic-alfonso-i-orfila",
    "telefon": "937 152 300",
@@ -11289,12 +10561,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 213,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-07"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/sitges-biblioteca-josep-roig-i-raventos",
    "telefon": "938 948 486",
@@ -11440,12 +10706,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 216,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-17",
-    "fi": "2026-08-25"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/taradell-biblioteca-antoni-pladevall-i-font",
    "telefon": "938 801 056",
@@ -11494,12 +10754,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 217,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/teia-biblioteca-de-can-llaurador",
    "telefon": "935 550 104",
@@ -11872,12 +11126,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 224,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/tiana-biblioteca-can-baratau",
    "telefon": "934 657 741",
@@ -11968,13 +11216,7 @@
     "observacions": "L'horari d'estiu comença el dia: 22 de juny Observacions de l'horari: La biblioteca romandrà tancada: 24 de juny Tancament: Del 3 al 7 d'agost, ambdós inclosos . 15 d'agost 11 i 12 de setembre"
    },
    "web_oficial": "http://www.bibliotecatona.cat/"
-  },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-07"
-   }
-  ]
+  }
  },
  {
   "nom": "Tordera. Biblioteca",
@@ -11986,12 +11228,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 226,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/tordera-biblioteca",
    "telefon": "937642560",
@@ -12181,12 +11417,6 @@
    },
    "web_oficial": "https://www.torrelles.cat/"
   },
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "avisos": {
    "text": "Dimarts 23 de juny la biblioteca romandrà tancada, així com la bústia de retorn 24h per raons de seguretat Horaris:",
    "font": "bibliotecavirtual.diba.cat",
@@ -12238,12 +11468,6 @@
    },
    "web_oficial": "http://www.vacarisses.cat/"
   },
-  "tancaments_estiu_web": [
-   {
-    "inici": "2026-08-01",
-    "fi": "2026-08-31"
-   }
-  ],
   "motiu": "Restricció PI",
   "avisos": {
    "text": "Horari d’estiu del 25 de juny al 31 de juliol Els dissabtes, diumenges i festius (consultar), de 10:00 h a 14:00 h podeu trobar l'informador/a del Parcs Naturals de Sant Llorenç del Munt i l'Obac i Montserrat Bibliopiscina juliol i agost Horaris:",
@@ -12262,12 +11486,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 231,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-10",
-    "fi": "2026-08-21"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/vallirana-biblioteca-josep-maria-lopez-pico",
    "telefon": "936 831 365",
@@ -12412,12 +11630,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 234,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-30"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/viladecavalls-biblioteca-pere-calders",
    "telefon": "937 341 802",
@@ -12676,12 +11888,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 239,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-14"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/vilanova-i-la-geltru-biblioteca-joan-oliva-i-mila",
    "telefon": "938 932 039",
@@ -12834,12 +12040,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 242,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-09-01"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-el-castellot",
    "font": "do.diba.cat (export CSV)",
@@ -12856,12 +12056,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 243,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-cavall-bernat",
    "font": "do.diba.cat (export CSV)",
@@ -12878,12 +12072,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 244,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-29",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-guilleries",
    "font": "do.diba.cat (export CSV)",
@@ -12900,12 +12088,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 245,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-la-mola",
    "font": "do.diba.cat (export CSV)",
@@ -12922,12 +12104,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 246,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-27",
-    "fi": "2026-08-26"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-montau",
    "font": "do.diba.cat (export CSV)",
@@ -12944,12 +12120,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 247,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-montnegre",
    "font": "do.diba.cat (export CSV)",
@@ -12966,12 +12136,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 248,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-29",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-montserrat",
    "font": "do.diba.cat (export CSV)",
@@ -12989,12 +12153,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 249,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-29",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-pedraforca",
    "font": "do.diba.cat (export CSV)",
@@ -13011,12 +12169,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 250,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-26"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-puigdon",
    "font": "do.diba.cat (export CSV)",
@@ -13033,12 +12185,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 251,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-31"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-serra-de-bellmunt",
    "font": "do.diba.cat (export CSV)",
@@ -13055,12 +12201,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 252,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-08-03",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-serra-de-rubio",
    "font": "do.diba.cat (export CSV)",
@@ -13078,12 +12218,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 253,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-29",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/bibliobus-serra-del-cadi",
    "font": "do.diba.cat (export CSV)",
@@ -13100,12 +12234,6 @@
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 254,
-  "tancaments_estiu": [
-   {
-    "inici": "2026-07-29",
-    "fi": "2026-08-28"
-   }
-  ],
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/ca/bibliobus-tagamanent",
    "font": "do.diba.cat (export CSV)",
