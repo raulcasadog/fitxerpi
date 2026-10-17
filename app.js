@@ -476,6 +476,26 @@ function escHtml(t){
   return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 }
 
+// Nom compacte per al full: municipi en negreta i la biblioteca al costat, sense
+// repeticions ("Biblioteca Municipal de…"). Barcelona s'abreuja a BCN, com a Sierra.
+function nomFull(nom){
+  if(/^Bibliob[uú]s - /.test(nom)) return {municipi: 'Bibliobús', branca: nom.replace(/^Bibliob[uú]s - /, '')};
+  // El primer ". " separa municipi i biblioteca, però no el de "St." / "Sta."
+  const m = nom.match(/^((?:Sta?\. )?[^.]+)\. (.+)$/);
+  if(!m) return {municipi: nom, branca: ''};
+  let municipi = m[1], branca = m[2];
+  if(municipi === 'Barcelona'){
+    municipi = 'BCN';
+    branca = branca.split('-')[0];
+  }
+  branca = branca
+    .replace(/^Biblioteca (Municipal|Pública)( de [^,]+)?$/i, '')
+    .replace(/^Biblioteca (Municipal |Pública )?/i, '')
+    .trim();
+  if(branca.toLowerCase() === 'biblioteca') branca = '';
+  return {municipi, branca};
+}
+
 function filesSetmana(dies){
   return DATA
     .map(lib => {
@@ -485,7 +505,7 @@ function filesSetmana(dies){
       const st = estats[primer];
       // A la taula el símbol ja diu si és tancada o restringida: només en deixem el detall.
       const meta = incidenciaMeta(lib, st, dies[primer]).replace(/^(Tancada|Restringida) · /, '');
-      return {lib, estats, motiu: motiuTag(lib, st), meta};
+      return {lib, estats, motiu: motiuTag(lib, st), meta, nom: nomFull(lib.nom)};
     })
     .filter(Boolean)
     .sort((a, b) => {
@@ -495,22 +515,35 @@ function filesSetmana(dies){
     });
 }
 
+// Fitxa A5 per tenir al costat de l'ordinador: codi, nom curt, què passa i quins dies.
 function renderFullSetmanal(){
   const dies = setmanaLaborable();
   const files = filesSetmana(dies);
-  const fmtLlarg = d => d.toLocaleDateString('ca-ES', {day:'numeric', month:'long'});
   const fmtCurt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
+  const mes = d => d.toLocaleDateString('ca-ES', {month:'short'}).replace('.', '');
   const any = dies[4].getFullYear();
   const avuiIdx = dies.findIndex(d => d.getTime() === today.getTime());
+  const rang = dies[0].getMonth() === dies[4].getMonth()
+    ? `${dies[0].getDate()}–${dies[4].getDate()} ${mes(dies[4])} ${any}`
+    : `${dies[0].getDate()} ${mes(dies[0])} – ${dies[4].getDate()} ${mes(dies[4])} ${any}`;
 
   const capDies = dies.map((d, i) => `
     <th class="fp-dia${i === avuiIdx ? ' fp-avui' : ''}">${DIES_CURTS[d.getDay()]}<span>${d.getDate()}</span></th>
   `).join('');
 
-  const cos = files.length ? files.map(({lib, estats, motiu, meta}) => `
-    <tr>
+  const cos = files.length ? files.map(({lib, estats, motiu, meta, nom}) => {
+    // Si no està afectada tota la setmana, ho diem amb paraules a més dels símbols.
+    const afectats = estats.filter(st => st.status !== 'obert').length;
+    const parcial = afectats < 5
+      ? ` · ${estats.map((st, i) => st.status !== 'obert' ? DIES_CURTS[dies[i].getDay()] : null).filter(Boolean).join(', ')}`
+      : '';
+    return `
+    <tr class="fp-fila-${estats.find(st => st.status !== 'obert').status}">
       <td class="fp-codi">${escHtml(lib.codi) || '—'}</td>
-      <td class="fp-nom">${escHtml(lib.nom)}</td>
+      <td class="fp-nom">
+        <div class="fp-nom-1"><b>${escHtml(nom.municipi)}</b>${nom.branca ? ` ${escHtml(nom.branca)}` : ''}</div>
+        <div class="fp-nom-2"><b>${escHtml(motiu)}</b>${meta ? ` · ${escHtml(truncate(meta, 52))}` : ''}${parcial}</div>
+      </td>
       ${estats.map((st, i) => {
         const sym = SHEET_SYMBOL[st.status];
         const cls = `fp-cel${i === avuiIdx ? ' fp-avui' : ''}`;
@@ -518,29 +551,35 @@ function renderFullSetmanal(){
           ? `<td class="${cls} fp-${st.status}" title="${sym.title}">${sym.glyph}</td>`
           : `<td class="${cls}"></td>`;
       }).join('')}
-      <td class="fp-motiu"><b>${escHtml(motiu)}</b>${meta ? ` · ${escHtml(meta)}` : ''}</td>
-    </tr>
-  `).join('') : `<tr><td colspan="8" class="fp-buit">Cap incidència prevista aquesta setmana: totes les biblioteques accepten PI.</td></tr>`;
+    </tr>`;
+  }).join('') : `<tr><td colspan="7" class="fp-buit">Cap incidència prevista aquesta setmana: totes les biblioteques accepten PI.</td></tr>`;
 
-  const generat = new Date().toLocaleString('ca-ES', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
+  const tancades = files.filter(f => f.estats.some(st => st.status === 'tancat')).length;
+  const restringides = files.filter(f => !f.estats.some(st => st.status === 'tancat') && f.estats.some(st => st.status === 'restringit')).length;
+  const generat = new Date().toLocaleString('ca-ES', {day:'2-digit', month:'2-digit', year:'2-digit', hour:'2-digit', minute:'2-digit'});
 
   document.getElementById('full-pi').innerHTML = `
     <header class="fp-head">
-      <div class="fp-marca">Fitxer PI · fitxerpi.cat</div>
-      <h2>Biblioteques on no es pot demanar PI</h2>
-      <p>Setmana del dilluns ${fmtLlarg(dies[0])} al divendres ${fmtLlarg(dies[4])} de ${any} · ${files.length} biblioteque${files.length === 1 ? 'a' : 's'}</p>
+      <div>
+        <h2>Biblioteques sense PI</h2>
+        <p>${rang}</p>
+      </div>
+      <div class="fp-recompte">
+        <span><b class="fp-tancat">■</b> ${tancades}</span>
+        <span><b class="fp-restringit">▲</b> ${restringides}</span>
+      </div>
     </header>
     <table class="fp-taula">
-      <thead><tr><th>Codi</th><th>Biblioteca</th>${capDies}<th>Motiu</th></tr></thead>
+      <thead><tr><th>Codi</th><th>Biblioteca · motiu</th>${capDies}</tr></thead>
       <tbody>${cos}</tbody>
     </table>
     <div class="fp-llegenda">
       <span><b class="fp-tancat">■</b> Tancada</span>
-      <span><b class="fp-restringit">▲</b> Restringida (no serveix o serveix parcialment)</span>
+      <span><b class="fp-restringit">▲</b> Restringida</span>
       <span><b class="fp-no_actiu">✕</b> No activa</span>
-      <span>Casella buida: accepta PI</span>
+      <span>Buit: accepta PI</span>
     </div>
-    <p class="fp-nota">Generat el ${generat} a partir de les dades de la Diputació de Barcelona. No inclou els avisos puntuals de bibliotecavirtual.diba.cat (festius locals, vagues…): consulteu la fitxa de cada biblioteca. Prototip no oficial.</p>
+    <p class="fp-nota">fitxerpi.cat · generat ${generat} · No inclou avisos puntuals (festius locals, vagues…). Prototip no oficial.</p>
   `;
 
   return `Biblioteques sense PI - setmana del ${fmtCurt(dies[0]).replace('/', '-')}-${any}`;

@@ -368,41 +368,42 @@ footer{
 .print-btn:disabled{opacity:.4; cursor:default;}
 .print-hint{font-size:13px; color:var(--ink-faint); margin:10px auto 0; max-width:36em;}
 
-/* ---- Full setmanal (només en imprimir) ---- */
+/* ---- Full setmanal (només en imprimir): fitxa A5 per tenir a tocar ---- */
 #full-pi{display:none;}
 @media print{
-  @page{size:A4 portrait; margin:12mm 11mm;}
-  body.print-pi{background:#fff; color:#1D1D1F; padding:0; font-size:9pt; line-height:1.35;}
+  @page{size:A5 portrait; margin:8mm 8mm 7mm;}
+  body.print-pi{background:#fff; color:#1D1D1F; padding:0; font-size:8pt; line-height:1.3;}
   body.print-pi .wrap{display:none;}
   body.print-pi #full-pi{display:block;}
   #full-pi{-webkit-print-color-adjust:exact; print-color-adjust:exact; color:#1D1D1F;}
-  .fp-head{margin-bottom:10px;}
-  .fp-marca{font-size:8pt; font-weight:600; color:#6E6E73;}
-  .fp-head h2{font-size:17pt; font-weight:700; letter-spacing:-0.02em; margin:2px 0 3px;}
-  .fp-head p{margin:0; font-size:9.5pt; color:#6E6E73;}
+  .fp-head{text-align:left; display:flex; justify-content:space-between; align-items:flex-end; gap:8px; margin-bottom:6px;}
+  .fp-head h2{font-size:14pt; font-weight:700; letter-spacing:-0.02em; margin:0; line-height:1.1;}
+  .fp-head p{max-width:none; text-align:left; margin:1px 0 0; font-size:9pt; font-weight:600; color:#6E6E73;}
+  .fp-recompte{display:flex; gap:10px; font-size:10pt; font-weight:700; font-variant-numeric:tabular-nums;}
   .fp-taula{width:100%; border-collapse:collapse; table-layout:fixed;}
   .fp-taula th{
-    font-size:7.5pt; font-weight:600; color:#6E6E73; text-align:left;
-    padding:4px 5px; border-bottom:1.2pt solid #1D1D1F;
+    font-size:6.5pt; font-weight:600; color:#6E6E73; text-align:left;
+    padding:2px 3px 3px; border-bottom:1pt solid #1D1D1F;
   }
-  .fp-taula th:nth-child(1){width:11%;}
-  .fp-taula th:nth-child(2){width:36%;}
-  .fp-taula th.fp-dia{width:5.4%; text-align:center;}
-  .fp-dia span{display:block; font-size:9pt; color:#1D1D1F;}
-  .fp-taula td{padding:4px 5px; border-bottom:.5pt solid #D2D2D7; vertical-align:top;}
+  .fp-taula th:nth-child(1){width:13mm;}
+  .fp-taula th.fp-dia{width:6mm; text-align:center; padding-inline:0;}
+  .fp-dia span{display:block; font-size:8pt; color:#1D1D1F;}
+  .fp-taula td{padding:3px 3px; border-bottom:.5pt solid #D2D2D7; vertical-align:middle;}
   .fp-taula tr{break-inside:avoid;}
   .fp-taula thead{display:table-header-group;}
-  .fp-codi{font-weight:700; font-variant-numeric:tabular-nums;}
-  .fp-cel{text-align:center; font-size:10pt; line-height:1.1;}
+  .fp-codi{font-size:9pt; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:.01em;}
+  .fp-nom-1{font-size:8.5pt; line-height:1.2;}
+  .fp-nom-1 b{font-weight:700;}
+  .fp-nom-2{font-size:6.5pt; line-height:1.25; color:#6E6E73; margin-top:1px;}
+  .fp-nom-2 b{font-weight:600; color:#3A3A3C;}
+  .fp-cel{text-align:center; font-size:9pt; line-height:1; padding-inline:0;}
   .fp-avui{background:#F2F2F4;}
-  .fp-motiu{font-size:8pt; color:#3A3A3C;}
-  .fp-motiu b{color:#1D1D1F;}
-  .fp-buit{text-align:center; padding:18px; color:#6E6E73;}
+  .fp-buit{text-align:center; padding:14px; color:#6E6E73;}
   .fp-tancat{color:#D70015;}
   .fp-restringit{color:#C93400;}
   .fp-no_actiu{color:#8E8E93;}
-  .fp-llegenda{display:flex; flex-wrap:wrap; gap:4px 16px; margin-top:10px; font-size:8pt; color:#3A3A3C;}
-  .fp-nota{margin:6px 0 0; font-size:7.5pt; color:#86868B;}
+  .fp-llegenda{display:flex; flex-wrap:wrap; gap:2px 12px; margin-top:6px; font-size:7pt; color:#3A3A3C;}
+  .fp-nota{margin:3px 0 0; font-size:6pt; color:#86868B;}
 }
 
 @media (max-width:560px){
