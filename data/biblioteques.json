@@ -10851,9 +10851,10 @@
   "codi": "cts4",
   "valises": 2,
   "freq": "dilluns i dimecres",
-  "estat": "obert",
-  "observacions": "",
-  "tancament_inici": null,
+  "estat": "tancat",
+  "motiu": "Incendi",
+  "observacions": "Tancada temporalment des del 17/10 pels danys d'un incendi a la façana. No reobrirà fins que es pugui garantir la seguretat dels usuaris.",
+  "tancament_inici": "2026-10-17",
   "tancament_fi": null,
   "id": 219,
   "horaris": {
