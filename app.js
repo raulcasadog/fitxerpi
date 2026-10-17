@@ -14,6 +14,7 @@ async function loadData(){
     DATA = await res.json();
     renderIncidencies();
     document.getElementById('print-week').disabled = false;
+    document.getElementById('print-week-a4').disabled = false;
   }catch(err){
     document.getElementById('detail').innerHTML =
       `<div class="empty-state"><div class="glyph">!</div><p>No s'han pogut carregar les dades (${err.message}). Si estàs obrint el fitxer directament des del disc, prova d'executar-lo amb un servidor local o publica'l a GitHub Pages.</p></div>`;
@@ -527,7 +528,7 @@ function etiquetaFull(f){
   return {status: st.status, tag, parcial: f.estats.some(s => s.status === 'obert')};
 }
 
-function renderFullSetmanal(){
+function renderFullSetmanal(gran = false){
   const dies = setmanaLaborable();
   const fmtCurt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
   const mes = d => d.toLocaleDateString('ca-ES', {month:'short'}).replace('.', '');
@@ -572,23 +573,26 @@ function renderFullSetmanal(){
       ${cos}
       <p class="fp-nota">■ Tancada · ▲ Només rep peticions, no en serveix (o no serveix el magatzem)${asterisc} · fitxerpi.cat · ${generat}</p>
     </div>
-    <p class="fp-tall">✂ Retalla per la línia de punts</p>
+    ${gran ? '' : '<p class="fp-tall">✂ Retalla per la línia de punts</p>'}
   `;
+  document.getElementById('full-pi').classList.toggle('fp-gran', gran);
 
   return `Biblioteques sense PI - setmana del ${fmtCurt(dies[0]).replace('/', '-')}-${any}`;
 }
 
-const printBtn = document.getElementById('print-week');
 let titolOriginal = document.title;
 
-printBtn.addEventListener('click', () => {
+function imprimirFull(gran){
   if(!DATA.length) return;
   titolOriginal = document.title;
   // El títol del document és el nom de fitxer que proposa "Desa com a PDF".
-  document.title = renderFullSetmanal();
+  document.title = renderFullSetmanal(gran) + (gran ? ' (A4)' : '');
   document.body.classList.add('print-pi');
   window.print();
-});
+}
+
+document.getElementById('print-week').addEventListener('click', () => imprimirFull(false));
+document.getElementById('print-week-a4').addEventListener('click', () => imprimirFull(true));
 
 window.addEventListener('afterprint', () => {
   if(!document.body.classList.contains('print-pi')) return;
