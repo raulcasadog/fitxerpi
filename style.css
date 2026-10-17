@@ -385,7 +385,7 @@ footer{
   .fp-head span{font-size:7.5pt; font-weight:600; color:#6E6E73;}
   .fp-cols{display:flex; gap:4mm;}
   .fp-col{flex:1; min-width:0;}
-  .fp-col h3{font-size:5.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#86868B; margin:0 0 1px;}
+  .fp-col h3{display:inline-block; font-size:6.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#fff; background:#0066CC; border-radius:2px; padding:1px 5px; margin:1px 0 2px;}
   .fp-taula{width:100%; border-collapse:collapse; table-layout:fixed;}
   .fp-taula td{padding:1.4px 2px; border-bottom:.4pt solid #E0E0E5; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
   .fp-codi{width:8.5mm; font-weight:700; font-variant-numeric:tabular-nums;}
