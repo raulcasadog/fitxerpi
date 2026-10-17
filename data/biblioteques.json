@@ -10853,9 +10853,9 @@
   "freq": "dilluns i dimecres",
   "estat": "tancat",
   "motiu": "Incendi",
-  "observacions": "Tancada temporalment des del 17/10 pels danys d'un incendi a la façana. No reobrirà fins que es pugui garantir la seguretat dels usuaris.",
+  "observacions": "Tancada temporalment des del 17/10 pels danys d'un incendi a la façana. Reobre dilluns 19/10 i torna a servir PI.",
   "tancament_inici": "2026-10-17",
-  "tancament_fi": null,
+  "tancament_fi": "2026-10-18",
   "id": 219,
   "horaris": {
    "web": "https://bibliotecavirtual.diba.cat/terrassa-biblioteca-districte-2",

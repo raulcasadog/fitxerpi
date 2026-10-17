@@ -211,7 +211,8 @@ function truncate(text, max = 70){
 function getIncidencies(){
   return DATA
     .map(l => ({lib: l, st: effectiveStatus(l)}))
-    .filter(({lib, st}) => st.status !== 'obert' || (lib.observacions && lib.observacions.trim()))
+    // Una biblioteca que ja ha reobert (tancament_fi passat) deixa de ser incidència.
+    .filter(({lib, st}) => !st.reopened && (st.status !== 'obert' || (lib.observacions && lib.observacions.trim())))
     .sort((a, b) => (a.st.status === 'obert' ? 1 : 0) - (b.st.status === 'obert' ? 1 : 0));
 }
 
@@ -233,7 +234,12 @@ function incidenciaMeta(lib, st, ref = today){
     if(periode) return `Tancada · torna el ${fmt(periode.fi)}`;
   }
   if(st.status === 'tancat'){
-    if(lib.tancament_fi) return `Tancada · torna el ${fmt(new Date(lib.tancament_fi+'T00:00:00'))}`;
+    if(lib.tancament_fi){
+      // tancament_fi és l'últim dia tancat: reobre l'endemà.
+      const torna = new Date(lib.tancament_fi+'T00:00:00');
+      torna.setDate(torna.getDate() + 1);
+      return `Tancada · torna el ${fmt(torna)}`;
+    }
     return 'Tancada · data de reobertura no confirmada';
   }
   if(st.status === 'restringit'){
@@ -348,7 +354,10 @@ function renderDetail(lib){
   } else if(st.status === 'no_actiu'){
     notice = `<div class="notice inactive"><span class="notice-icon">&#9679;</span><span>Servei no actiu actualment.</span></div>`;
   } else if(st.reopened){
-    notice = `<div class="notice restricted"><span class="notice-icon">&#10003;</span><span>Havia estat tancada (${lib.observacions}), però la data de tancament ja ha passat.</span></div>`;
+    const torna = new Date(lib.tancament_fi + 'T00:00:00');
+    torna.setDate(torna.getDate() + 1);
+    const fmtR = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
+    notice = `<div class="notice restricted"><span class="notice-icon">&#10003;</span><span>Reoberta el ${fmtR(torna)} després d'un tancament temporal. Ja pot servir PI.</span></div>`;
   } else if(lib.observacions){
     notice = `<div class="notice restricted"><span class="notice-icon">&#9432;</span><span>${lib.observacions}</span></div>`;
   }
