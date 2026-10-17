@@ -515,71 +515,64 @@ function filesSetmana(dies){
     });
 }
 
-// Fitxa A5 per tenir al costat de l'ordinador: codi, nom curt, què passa i quins dies.
+// Fitxa petita (A6 apaïsat, 14,8 × 10,5 cm) dins d'un full A4, amb línia de tall,
+// per retallar-la i tenir-la al costat de l'ordinador. Dues llistes: per codi i per municipi.
+function etiquetaFull(f){
+  const st = f.estats.find(s => s.status === 'tancat') || f.estats.find(s => s.status !== 'obert');
+  let tag;
+  if(st.status === 'tancat') tag = 'Tancada';
+  else if(st.status === 'no_actiu') tag = 'No activa';
+  else if(/magatzem/i.test(f.lib.observacions || '')) tag = 'No magatzem';
+  else tag = 'Només rep';
+  return {status: st.status, tag, parcial: f.estats.some(s => s.status === 'obert')};
+}
+
 function renderFullSetmanal(){
   const dies = setmanaLaborable();
-  const files = filesSetmana(dies);
   const fmtCurt = d => d.toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit'});
   const mes = d => d.toLocaleDateString('ca-ES', {month:'short'}).replace('.', '');
   const any = dies[4].getFullYear();
-  const avuiIdx = dies.findIndex(d => d.getTime() === today.getTime());
   const rang = dies[0].getMonth() === dies[4].getMonth()
     ? `${dies[0].getDate()}–${dies[4].getDate()} ${mes(dies[4])} ${any}`
     : `${dies[0].getDate()} ${mes(dies[0])} – ${dies[4].getDate()} ${mes(dies[4])} ${any}`;
 
-  const capDies = dies.map((d, i) => `
-    <th class="fp-dia${i === avuiIdx ? ' fp-avui' : ''}">${DIES_CURTS[d.getDay()]}<span>${d.getDate()}</span></th>
-  `).join('');
+  // Només les que tenen codi PI: sense codi no es poden demanar igualment.
+  const files = filesSetmana(dies)
+    .filter(f => f.lib.codi)
+    .map(f => ({...f, et: etiquetaFull(f)}));
+  const clauMun = f => f.nom.municipi === 'BCN' ? 'Barcelona' : f.nom.municipi;
+  const perMunicipi = [...files].sort((a, b) =>
+    clauMun(a).localeCompare(clauMun(b), 'ca') || a.nom.branca.localeCompare(b.nom.branca, 'ca'));
 
-  const cos = files.length ? files.map(({lib, estats, motiu, meta, nom}) => {
-    // Si no està afectada tota la setmana, ho diem amb paraules a més dels símbols.
-    const afectats = estats.filter(st => st.status !== 'obert').length;
-    const parcial = afectats < 5
-      ? ` · ${estats.map((st, i) => st.status !== 'obert' ? DIES_CURTS[dies[i].getDay()] : null).filter(Boolean).join(', ')}`
-      : '';
-    return `
-    <tr class="fp-fila-${estats.find(st => st.status !== 'obert').status}">
-      <td class="fp-codi">${escHtml(lib.codi) || '—'}</td>
-      <td class="fp-nom">
-        <div class="fp-nom-1"><b>${escHtml(nom.municipi)}</b>${nom.branca ? ` ${escHtml(nom.branca)}` : ''}</div>
-        <div class="fp-nom-2"><b>${escHtml(motiu)}</b>${meta ? ` · ${escHtml(truncate(meta, 52))}` : ''}${parcial}</div>
-      </td>
-      ${estats.map((st, i) => {
-        const sym = SHEET_SYMBOL[st.status];
-        const cls = `fp-cel${i === avuiIdx ? ' fp-avui' : ''}`;
-        return sym
-          ? `<td class="${cls} fp-${st.status}" title="${sym.title}">${sym.glyph}</td>`
-          : `<td class="${cls}"></td>`;
-      }).join('')}
+  const fila = ({lib, nom, et}) => `
+    <tr>
+      <td class="fp-codi">${escHtml(lib.codi)}</td>
+      <td class="fp-nom"><b>${escHtml(nom.municipi)}</b>${nom.branca ? ` ${escHtml(nom.branca)}` : ''}</td>
+      <td class="fp-tag fp-${et.status}"><i>${SHEET_SYMBOL[et.status].glyph}</i>${escHtml(et.tag)}${et.parcial ? '*' : ''}</td>
     </tr>`;
-  }).join('') : `<tr><td colspan="7" class="fp-buit">Cap incidència prevista aquesta setmana: totes les biblioteques accepten PI.</td></tr>`;
+  const llista = (titol, ll) => `
+    <div class="fp-col">
+      <h3>${titol}</h3>
+      <table class="fp-taula"><tbody>${ll.map(fila).join('')}</tbody></table>
+    </div>`;
 
-  const tancades = files.filter(f => f.estats.some(st => st.status === 'tancat')).length;
-  const restringides = files.filter(f => !f.estats.some(st => st.status === 'tancat') && f.estats.some(st => st.status === 'restringit')).length;
-  const generat = new Date().toLocaleString('ca-ES', {day:'2-digit', month:'2-digit', year:'2-digit', hour:'2-digit', minute:'2-digit'});
+  const cos = files.length
+    ? `<div class="fp-cols">${llista('Per codi', files)}${llista('Per municipi', perMunicipi)}</div>`
+    : `<p class="fp-buit">Cap incidència prevista aquesta setmana: totes les biblioteques accepten PI.</p>`;
+
+  const generat = new Date().toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit', year:'2-digit'});
+  const asterisc = files.some(f => f.et.parcial) ? ' · * no tota la setmana' : '';
 
   document.getElementById('full-pi').innerHTML = `
-    <header class="fp-head">
-      <div>
+    <div class="fp-fitxa">
+      <header class="fp-head">
         <h2>Biblioteques sense PI</h2>
-        <p>${rang}</p>
-      </div>
-      <div class="fp-recompte">
-        <span><b class="fp-tancat">■</b> ${tancades}</span>
-        <span><b class="fp-restringit">▲</b> ${restringides}</span>
-      </div>
-    </header>
-    <table class="fp-taula">
-      <thead><tr><th>Codi</th><th>Biblioteca · motiu</th>${capDies}</tr></thead>
-      <tbody>${cos}</tbody>
-    </table>
-    <div class="fp-llegenda">
-      <span><b class="fp-tancat">■</b> Tancada</span>
-      <span><b class="fp-restringit">▲</b> Restringida</span>
-      <span><b class="fp-no_actiu">✕</b> No activa</span>
-      <span>Buit: accepta PI</span>
+        <span>${rang}</span>
+      </header>
+      ${cos}
+      <p class="fp-nota">■ Tancada · ▲ Només rep peticions, no en serveix (o no serveix el magatzem)${asterisc} · fitxerpi.cat · ${generat}</p>
     </div>
-    <p class="fp-nota">fitxerpi.cat · generat ${generat} · No inclou avisos puntuals (festius locals, vagues…). Prototip no oficial.</p>
+    <p class="fp-tall">✂ Retalla per la línia de punts</p>
   `;
 
   return `Biblioteques sense PI - setmana del ${fmtCurt(dies[0]).replace('/', '-')}-${any}`;
