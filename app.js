@@ -244,6 +244,7 @@ function incidenciaMeta(lib, st, ref = today){
   }
   if(st.status === 'restringit'){
     // No totes les restriccions són "només rep": n'hi ha de parcials (p. ex. magatzem).
+    if(lib.restriccio) return `Restringida · ${lib.restriccio}`;
     if(lib.observacions && /magatzem/i.test(lib.observacions)) return 'Restringida · no serveix documents de magatzem';
     return 'Restringida · només rep peticions';
   }
