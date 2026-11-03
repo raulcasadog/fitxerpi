@@ -1,0 +1,64 @@
+# Actualitza els avisos de les biblioteques (camp "avisos" de data/biblioteques.json).
+#
+# Com fer-lo servir: pestanya Actions > "Actualitza avisos de biblioteques" > Run workflow.
+# - Si NO marques "Publicar", només fa la prova: mostra el resum i no canvia res.
+# - Si marques "Publicar", desa el resultat al repositori i la web s'actualitza.
+#
+# Si les comprovacions de resum-avisos.js fallen, s'atura i no publica res.
+
+name: Actualitza avisos de biblioteques
+
+on:
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: "Publicar el resultat (si no es marca, només és una prova)"
+        type: boolean
+        default: false
+  # Execució mensual. Es pot activar traient el # de les dues línies següents,
+  # quan una prova hagi demostrat que el resultat és bo.
+  # schedule:
+  #   - cron: "17 6 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-avisos
+  cancel-in-progress: false
+
+jobs:
+  actualitza:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Descarrega el repositori
+        uses: actions/checkout@v4
+
+      - name: Prepara Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Guarda una còpia de les dades actuals
+        run: cp data/biblioteques.json "$RUNNER_TEMP/abans.json"
+
+      - name: Llegeix els avisos de la Biblioteca virtual
+        run: node scripts/sync-avisos.js
+
+      - name: Comprova el resultat
+        run: node scripts/resum-avisos.js "$RUNNER_TEMP/abans.json" data/biblioteques.json
+
+      - name: Publica els canvis
+        if: ${{ github.event_name == 'schedule' || inputs.publicar }}
+        run: |
+          if git diff --quiet -- data/biblioteques.json; then
+            echo "No hi ha cap canvi per publicar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/biblioteques.json
+          git commit -m "Actualitza avisos de biblioteques ($(date +%d/%m/%Y))"
+          git pull --rebase origin main
+          git push origin HEAD:main
