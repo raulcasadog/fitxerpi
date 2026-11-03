@@ -179,6 +179,8 @@ function extractObservacions(pageHtml) {
   // Si el marcador de tancament cau enmig d'una etiqueta (p. ex. "<h3 id=..."),
   // pot quedar un fragment d'etiqueta incomplet penjant al final; el traiem.
   text = text.replace(/<[^>]*$/, '').trim();
+  // El títol de la secció següent pot quedar enganxat al final del text.
+  text = text.replace(/\s*Horaris:?\s*$/i, '').trim();
 
   // Xarxa de seguretat: un avís real hauria de ser breu. Si els marcadors de
   // tancament no han encaixat amb l'HTML real d'aquesta pàgina en concret i
