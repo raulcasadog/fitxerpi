@@ -7966,9 +7966,9 @@
   "codi": "bab1",
   "valises": 4,
   "freq": "dilluns, dimecres i divendres",
-  "estat": "restringit",
-  "observacions": "Inundació al magatzem: no es poden demanar per PI documents localitzats a magatzem fins a nou avís. La resta del fons es pot demanar amb normalitat.",
-  "motiu": "Inundació",
+  "estat": "obert",
+  "observacions": "",
+  "motiu": null,
   "tancament_inici": null,
   "tancament_fi": null,
   "id": 163,
@@ -8008,12 +8008,6 @@
     "observacions": "L'horari d'estiu comença el dia: 22 de juny Observacions de l'horari: Horari intensiu: tardes de dilluns a dijous i divendres matí. Vacances 2026: Tancat del 27 de juliol al 16 d'agost, ambdós inclosos. La bústia de retorn de préstecs també restarà tancada durant aquest període."
    },
    "web_oficial": "http://www.sant-adria.net/"
-  },
-  "avisos": {
-   "text": "AVÍS LA BIBLIOTECA ESTARÀ TANCADA TEMPORALMENT FINS A NOU AVÍS Recordeu que la bústia de retorn de documents queda tancada en vacances. Disculpeu les molèsties. ------------------------------------------------------------------------------- SALA D'ESTUDI La Biblioteca Sant Adrià disposa d'una sala d'estudi, oberta dins de l’horari d’obertura de la Biblioteca. La sala està compartida amb el Centre Juvenil Polidor.…",
-   "font": "bibliotecavirtual.diba.cat",
-   "url": "https://bibliotecavirtual.diba.cat/sant-adria-de-besos-biblioteca",
-   "actualitzat": "2026-11-03"
   }
  },
  {
