@@ -402,6 +402,10 @@ footer{
   .fp-no_actiu{color:#8E8E93;}
   .fp-buit{text-align:center; padding:14px; color:#6E6E73;}
   .fp-nota{margin:3px 0 0; font-size:5.5pt; color:#86868B;}
+  .fp-avisos{margin:4px 0 0; padding:3px 5px; background:#F0F6FF; border-left:1.5pt solid #0066CC; border-radius:2px; font-size:6pt; line-height:1.3;}
+  .fp-avisos p{margin:0;}
+  .fp-avisos p + p{margin-top:2px;}
+  .fp-avisos i{font-style:normal; color:#0066CC; font-weight:700; margin-right:3px;}
   /* Variant A4 sencer: la mateixa fitxa, apaïsada i a tot el full */
   #full-pi.fp-gran .fp-fitxa{page:fpgran; zoom:2; width:140mm; height:96mm; border:none; padding:2mm 3mm;}
   .fp-tall{margin:2mm 0 0 1mm; font-size:6.5pt; color:#AEAEB2;}

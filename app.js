@@ -571,6 +571,24 @@ function renderFullSetmanal(gran = false){
     ? `<div class="fp-cols">${llista('Per codi', files)}${llista('Per municipi', perMunicipi)}</div>`
     : `<p class="fp-buit">Cap incidència prevista aquesta setmana: totes les biblioteques accepten PI.</p>`;
 
+  // Tancaments programats que comencen en els 14 dies posteriors a la setmana del full:
+  // encara no surten a la taula, però convé tenir-los presents (avís ⓘ amb les observacions).
+  const limit = new Date(dies[4]);
+  limit.setDate(limit.getDate() + 14);
+  const propers = DATA
+    .filter(lib => lib.codi && lib.estat === 'tancat' && lib.tancament_inici)
+    .filter(lib => {
+      const inici = new Date(lib.tancament_inici + 'T00:00:00');
+      return inici > dies[4] && inici <= limit;
+    })
+    .sort((a, b) => a.tancament_inici.localeCompare(b.tancament_inici));
+  const avisos = propers.length
+    ? `<div class="fp-avisos">${propers.map(lib => {
+        const nom = nomFull(lib.nom);
+        return `<p><i>ⓘ</i><b>${escHtml(lib.codi)} ${escHtml(nom.municipi)}${nom.branca ? ` ${escHtml(nom.branca)}` : ''}:</b> ${escHtml(lib.observacions)}</p>`;
+      }).join('')}</div>`
+    : '';
+
   const generat = new Date().toLocaleDateString('ca-ES', {day:'2-digit', month:'2-digit', year:'2-digit'});
   const asterisc = files.some(f => f.et.parcial) ? ' · * no tota la setmana' : '';
 
@@ -581,6 +599,7 @@ function renderFullSetmanal(gran = false){
         <span>${rang}</span>
       </header>
       ${cos}
+      ${avisos}
       <p class="fp-nota">■ Tancada · ▲ Només rep peticions, no en serveix (o no serveix el magatzem)${asterisc} · fitxerpi.cat · ${generat}</p>
     </div>
     ${gran ? '' : '<p class="fp-tall">✂ Retalla per la línia de punts</p>'}
